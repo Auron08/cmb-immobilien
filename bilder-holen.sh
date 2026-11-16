@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# Lädt die Bilder der alten CMB-Seite und die Objektbilder von Immowelt in dieses Projekt.
+# Aufruf im Projektordner:  bash bilder-holen.sh
+set -u
+cd "$(dirname "$0")"
+mkdir -p assets/img assets/img/hero assets/img/objekte assets/img/team
+UA="Mozilla/5.0"
+fehler=0
+curl -fsSL -A "$UA" -o "assets/img/logo-cmb.png" "https://cmb-immobilien.com/assets/img/logo.png" && echo "ok   assets/img/logo-cmb.png" || { echo "FEHLT assets/img/logo-cmb.png"; fehler=1; }
+curl -fsSL -A "$UA" -o "assets/img/logo-cmb-footer.png" "https://cmb-immobilien.com/assets/img/footer-logo.png" && echo "ok   assets/img/logo-cmb-footer.png" || { echo "FEHLT assets/img/logo-cmb-footer.png"; fehler=1; }
+curl -fsSL -A "$UA" -o "assets/img/hero/buero-fassade.jpg" "https://cmb-immobilien.com/assets/img/slider-bg/slider-bg-1.jpg" && echo "ok   assets/img/hero/buero-fassade.jpg" || { echo "FEHLT assets/img/hero/buero-fassade.jpg"; fehler=1; }
+curl -fsSL -A "$UA" -o "assets/img/hero/team-runde.jpg" "https://cmb-immobilien.com/assets/img/slider-bg/slider-bg-2.jpg" && echo "ok   assets/img/hero/team-runde.jpg" || { echo "FEHLT assets/img/hero/team-runde.jpg"; fehler=1; }
+curl -fsSL -A "$UA" -o "assets/img/hero/beratung.jpg" "https://cmb-immobilien.com/assets/img/slider-bg/slider-bg-3.jpg" && echo "ok   assets/img/hero/beratung.jpg" || { echo "FEHLT assets/img/hero/beratung.jpg"; fehler=1; }
+curl -fsSL -A "$UA" -o "assets/img/hero/inhaberin.jpg" "https://cmb-immobilien.com/assets/img/slider-bg/slider-bg-4.jpg" && echo "ok   assets/img/hero/inhaberin.jpg" || { echo "FEHLT assets/img/hero/inhaberin.jpg"; fehler=1; }
+curl -fsSL -A "$UA" -o "assets/img/ueber-uns.jpg" "https://cmb-immobilien.com/assets/img/about-video.jpg" && echo "ok   assets/img/ueber-uns.jpg" || { echo "FEHLT assets/img/ueber-uns.jpg"; fehler=1; }
+curl -fsSL -A "$UA" -o "assets/img/seitenkopf.jpg" "https://cmb-immobilien.com/assets/img/hero-area-bg.jpg" && echo "ok   assets/img/seitenkopf.jpg" || { echo "FEHLT assets/img/seitenkopf.jpg"; fehler=1; }
+curl -fsSL -A "$UA" -o "assets/img/hintergrund.jpg" "https://cmb-immobilien.com/assets/img/newsletterbg.jpg" && echo "ok   assets/img/hintergrund.jpg" || { echo "FEHLT assets/img/hintergrund.jpg"; fehler=1; }
+curl -fsSL -A "$UA" -o "assets/img/team/ilona.jpg" "https://cmb-immobilien.com/assets/img/ilona1.jpg" && echo "ok   assets/img/team/ilona.jpg" || { echo "FEHLT assets/img/team/ilona.jpg"; fehler=1; }
+curl -fsSL -A "$UA" -o "assets/img/team/renata.jpg" "https://cmb-immobilien.com/assets/img/renata.jpg" && echo "ok   assets/img/team/renata.jpg" || { echo "FEHLT assets/img/team/renata.jpg"; fehler=1; }
+curl -fsSL -A "$UA" -o "assets/img/team/hugo.jpg" "https://cmb-immobilien.com/assets/img/hugo.jpg" && echo "ok   assets/img/team/hugo.jpg" || { echo "FEHLT assets/img/team/hugo.jpg"; fehler=1; }
+curl -fsSL -A "$UA" -o "assets/img/objekte/c1c92e72-99e8-4dba-bb66-506f6afecf92.jpg" "https://mms.immowelt.de/1/1/c/2/11c25de7-4a38-4f53-9717-8239c995b0cd.jpg" && echo "ok   assets/img/objekte/c1c92e72-99e8-4dba-bb66-506f6afecf92.jpg" || { echo "FEHLT assets/img/objekte/c1c92e72-99e8-4dba-bb66-506f6afecf92.jpg"; fehler=1; }
+curl -fsSL -A "$UA" -o "assets/img/objekte/9f14f427-0525-4ff0-9895-4afffcbcea4f.jpg" "https://mms.immowelt.de/3/b/e/c/3bec4f56-d2f0-44f2-8960-ebf566c7729a.jpg" && echo "ok   assets/img/objekte/9f14f427-0525-4ff0-9895-4afffcbcea4f.jpg" || { echo "FEHLT assets/img/objekte/9f14f427-0525-4ff0-9895-4afffcbcea4f.jpg"; fehler=1; }
+curl -fsSL -A "$UA" -o "assets/img/objekte/cf1c00d0-13ae-45be-abe6-38a7a6c4d0a1.jpg" "https://mms.immowelt.de/6/3/4/1/6341add9-1248-481c-a660-d64915fbce4e.jpg" && echo "ok   assets/img/objekte/cf1c00d0-13ae-45be-abe6-38a7a6c4d0a1.jpg" || { echo "FEHLT assets/img/objekte/cf1c00d0-13ae-45be-abe6-38a7a6c4d0a1.jpg"; fehler=1; }
+curl -fsSL -A "$UA" -o "assets/img/objekte/7e170c60-36f3-47e5-b9ee-a3244d3decc3.jpg" "https://mms.immowelt.de/c/8/c/2/c8c23988-d9c6-4ba2-95fa-274ab2b66f6d.jpg" && echo "ok   assets/img/objekte/7e170c60-36f3-47e5-b9ee-a3244d3decc3.jpg" || { echo "FEHLT assets/img/objekte/7e170c60-36f3-47e5-b9ee-a3244d3decc3.jpg"; fehler=1; }
+curl -fsSL -A "$UA" -o "assets/img/objekte/ca891b49-d088-440d-968b-3369a076f68c.jpg" "https://mms.immowelt.de/c/8/5/a/c85a1727-3dbf-45ae-90db-4cdc47cef4a7.jpg" && echo "ok   assets/img/objekte/ca891b49-d088-440d-968b-3369a076f68c.jpg" || { echo "FEHLT assets/img/objekte/ca891b49-d088-440d-968b-3369a076f68c.jpg"; fehler=1; }
+curl -fsSL -A "$UA" -o "assets/img/objekte/bd00e23b-0c68-4db7-ae4a-7ab8d997e37b.jpg" "https://mms.immowelt.de/0/5/e/8/05e82aa3-ffd9-4e5c-acff-06be795d57fd.jpg" && echo "ok   assets/img/objekte/bd00e23b-0c68-4db7-ae4a-7ab8d997e37b.jpg" || { echo "FEHLT assets/img/objekte/bd00e23b-0c68-4db7-ae4a-7ab8d997e37b.jpg"; fehler=1; }
+curl -fsSL -A "$UA" -o "assets/img/objekte/cbfa95fa-4f32-43af-bca0-4187faeb4c38.jpg" "https://mms.immowelt.de/f/c/e/5/fce59b35-c3d0-469a-a60c-acfe8ee364f1.jpg" && echo "ok   assets/img/objekte/cbfa95fa-4f32-43af-bca0-4187faeb4c38.jpg" || { echo "FEHLT assets/img/objekte/cbfa95fa-4f32-43af-bca0-4187faeb4c38.jpg"; fehler=1; }
+curl -fsSL -A "$UA" -o "assets/img/objekte/de921903-0b86-4a2d-bf10-5d005a31802d.jpg" "https://mms.immowelt.de/6/e/d/d/6eddc2c5-49db-4814-95dd-eeff91fa29ea.jpg" && echo "ok   assets/img/objekte/de921903-0b86-4a2d-bf10-5d005a31802d.jpg" || { echo "FEHLT assets/img/objekte/de921903-0b86-4a2d-bf10-5d005a31802d.jpg"; fehler=1; }
+curl -fsSL -A "$UA" -o "assets/img/objekte/dd60b6b8-d771-483e-afe4-aef00bdf5d55.jpg" "https://mms.immowelt.de/d/7/d/8/d7d89105-4451-4538-8768-257a4b159ba0.jpg" && echo "ok   assets/img/objekte/dd60b6b8-d771-483e-afe4-aef00bdf5d55.jpg" || { echo "FEHLT assets/img/objekte/dd60b6b8-d771-483e-afe4-aef00bdf5d55.jpg"; fehler=1; }
+curl -fsSL -A "$UA" -o "assets/img/objekte/6ec44cd3-4312-44a1-a7c7-3c57994d34e7.jpg" "https://mms.immowelt.de/2/5/3/7/253720e1-aeb4-4659-ab3e-b72ca50bf205.jpg" && echo "ok   assets/img/objekte/6ec44cd3-4312-44a1-a7c7-3c57994d34e7.jpg" || { echo "FEHLT assets/img/objekte/6ec44cd3-4312-44a1-a7c7-3c57994d34e7.jpg"; fehler=1; }
+curl -fsSL -A "$UA" -o "assets/img/objekte/eaf284c9-3c8c-4f79-b36a-fad452ad7c66.jpg" "https://mms.immowelt.de/7/7/0/d/770d1ee4-19a4-4f26-b03e-e39bf1a135e7.jpg" && echo "ok   assets/img/objekte/eaf284c9-3c8c-4f79-b36a-fad452ad7c66.jpg" || { echo "FEHLT assets/img/objekte/eaf284c9-3c8c-4f79-b36a-fad452ad7c66.jpg"; fehler=1; }
+[ $fehler -eq 0 ] && echo "Alle Bilder geladen." || echo "Einige Bilder fehlen, siehe oben."

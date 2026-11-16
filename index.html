@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CMB Immobilien Mettmann | Ihr Makler mit Herz und Verstand</title>
+  <meta name="description" content="CMB Immobilien in Mettmann: Verkauf, Kauf, Vermietung, Bewertung und Verwaltung von Wohn- und Gewerbeimmobilien. Persönlich, transparent und mit Herz und Verstand.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="CMB Immobilien">
+  <meta property="og:title" content="CMB Immobilien Mettmann | Ihr Makler mit Herz und Verstand">
+  <meta property="og:description" content="CMB Immobilien in Mettmann: Verkauf, Kauf, Vermietung, Bewertung und Verwaltung von Wohn- und Gewerbeimmobilien. Persönlich, transparent und mit Herz und Verstand.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/tenor-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/montserrat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/home3d.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "RealEstateAgent", "name": "CMB Immobilien", "url": "https://cmb-immobilien.com/", "telephone": "+49 2104 175052", "email": "info@cmb-immobilien.com", "founder": {"@type": "Person", "name": "Ilona Tatura"}, "address": {"@type": "PostalAddress", "streetAddress": "Poststraße 16", "postalCode": "40822", "addressLocality": "Mettmann", "addressCountry": "DE"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "10:00", "closes": "18:00"}], "areaServed": ["Mettmann", "Ratingen", "Wülfrath", "Haan", "Erkrath", "Heiligenhaus", "Düsseldorf", "Solingen"], "sameAs": ["https://www.instagram.com/makeln_mit__herz_und_verstand/?hl=de", "https://www.facebook.com/cmbimmobilien/?ref=page_internal"]}</script>
+  <link rel="stylesheet" href="assets/css/theme-light.css">
+</head>
+<body class="home">
+<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="CMB Immobilien, zur Startseite"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+  <path d="M8 33 32 12l24 21M14 30v24h36V30" fill="none" stroke="#a8cd4e" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M32 47c-8-5.500-9.500-10-7-13.500 2.300-2.800 5.800-2.200 7 .2 1.200-2.400 4.700-3 7-.2 2.500 3.500 1 8-7 13.500z" fill="#a8cd4e"/>
+</svg>
+      <span class="logo-text"><strong>CMB</strong><span>Immobilien</span></span></a>
+    <button class="nav-toggle" type="button" aria-controls="hauptmenue" aria-expanded="false" aria-label="Menü öffnen"><span></span></button>
+    <nav class="nav" id="hauptmenue" aria-label="Hauptmenü">
+      <ul>
+        <li><a class="nav-link" href="index.html" aria-current="page">Start</a></li>
+        <li><a class="nav-link" href="ueber-uns.html">Über uns</a></li>
+        <li><a class="nav-link" href="leistungen.html">Leistungen</a></li>
+        <li><a class="nav-link" href="angebote.html">Angebote</a></li>
+        <li><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+      </ul>
+      <a class="btn btn--primary" href="kontakt.html?anliegen=Bewertung">Bewertung anfragen</a>
+    </nav>
+  </div>
+</header>
+<main id="inhalt">
+<section class="hero-video" aria-labelledby="h-titel">
+  <div class="vbg" aria-hidden="true"><video muted loop playsinline autoplay preload="metadata" poster="assets/video/kueste.jpg" data-src="assets/video/kueste.mp4"></video></div>
+  <span class="hv-line" aria-hidden="true"></span>
+  <div class="hv-inner">
+    <p class="hv-kicker">CMB Immobilien · Mettmann</p>
+    <h1 id="h-titel">Ihr Makler mit Herz und Verstand</h1>
+    <p class="hv-lead">Wir verkaufen, vermieten und verwalten Wohn- und Gewerbeimmobilien in Mettmann und Umgebung. Mit Zeit für Ihr Anliegen.</p>
+    <div class="btn-row">
+      <a class="btn btn--light" href="angebote.html">Aktuelle Angebote</a>
+      <a class="btn btn--light" href="kontakt.html?anliegen=Bewertung">Immobilie bewerten lassen</a>
+    </div>
+  </div>
+</section>
+
+<div class="searchbar" id="objekte-bereich">
+  <form class="wrap" id="suchform" role="search" aria-label="Objektsuche" action="angebote.html" method="get">
+    <div class="sb-search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4-4"/></svg>
+      <label for="suche" style="position:absolute;left:-9999px">Ort oder Stadtteil suchen</label>
+      <input id="suche" name="ort" type="search" placeholder="Ort suchen, zum Beispiel Solingen" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="sb-liste" aria-autocomplete="list">
+      <ul class="sb-liste" id="sb-liste" role="listbox" aria-label="Vorschläge" hidden></ul>
+    </div>
+    <div class="tabs" role="group" aria-label="Angebotsart">
+      <button type="submit" name="art" value="alle" aria-pressed="true">Alle</button>
+      <button type="submit" name="art" value="kauf" aria-pressed="false">Kaufen</button>
+      <button type="submit" name="art" value="miete" aria-pressed="false">Mieten</button>
+    </div>
+    <a class="sb-book" href="kontakt.html?anliegen=Besichtigung">Termin vereinbaren &rarr;</a>
+  </form>
+</div>
+
+<canvas id="welt" aria-hidden="true"></canvas>
+<svg id="leader" aria-hidden="true"></svg>
+<ul id="etagen" aria-hidden="true">
+  <li><strong>Verwaltung</strong><span>Miet- und WEG-Verwaltung als solides Fundament.</span></li>
+  <li><strong>Vermietung</strong><span>Häuser und Wohnungen für unseren breiten Kundenstamm.</span></li>
+  <li><strong>Verkauf &amp; Kauf</strong><span>Vom Exposé bis zur Übergabe, persönlich begleitet.</span></li>
+  <li><strong>Bewertung</strong><span>Marktwert und Potenzial, präzise und unverbindlich.</span></li>
+</ul>
+<div id="story">
+  <section class="beat" id="beat-hero" aria-labelledby="h-drei">
+    <div class="beat-inner">
+      <p class="kicker">Unsere Leistungen</p>
+      <h2 id="h-drei">Verkauf. Vermietung. Verwaltung.</h2>
+      <p class="lead">Wir arbeiten mit Menschen, nicht nur für Menschen. Eine Lösung für Sie und Ihre Immobilie, losgelöst vom Umsatzgedanken.</p>
+    </div>
+    <p class="scroll-hint">Scrollen</p>
+    <div class="static-art"><svg viewBox="0 0 400 440" role="img" aria-label="Gezeichnetes Haus mit einem Herz im Giebel" fill="none" stroke="#a8cd4e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <path class="draw" pathLength="1" style="--d:0s" d="M30 382H370"/>
+  <path class="draw" pathLength="1" style="--d:.3s" d="M95 382V222M305 382V222"/>
+  <path class="draw" pathLength="1" style="--d:.6s" d="M66 232 200 112 334 232"/>
+  <path class="draw" pathLength="1" style="--d:1s" d="M262 165V122H288V187"/>
+  <path class="draw" pathLength="1" style="--d:1.2s" d="M168 382V308Q200 282 232 308V382"/>
+  <path class="draw" pathLength="1" style="--d:1.4s" d="M114 262H154V302H114ZM134 262V302M114 282H154"/>
+  <path class="draw" pathLength="1" style="--d:1.5s" d="M246 262H286V302H246ZM266 262V302M246 282H286"/>
+  <circle class="draw" pathLength="1" style="--d:1.6s" cx="352" cy="318" r="26" stroke="#e8ecf4" stroke-opacity=".4"/>
+  <path class="draw" pathLength="1" style="--d:1.7s" d="M352 344V382" stroke="#e8ecf4" stroke-opacity=".4"/>
+  <path class="draw-fill" d="M200 206C172 186 180 160 200 172 220 160 228 186 200 206Z" fill="#a8cd4e" stroke="none"/>
+</svg></div>
+  </section>
+  <section class="beat" id="beat-close" aria-labelledby="h-herz">
+    <div class="beat-inner">
+      <p class="kicker">Unsere Haltung</p>
+      <h2 id="h-herz">Mit Herz.</h2>
+      <p class="lead lead--em">Die Zufriedenheit unserer Kunden liegt uns am Herzen. Deshalb nehmen wir uns Zeit für eine ausführliche Beratung und professionelle Begleitung.</p>
+    </div>
+  </section>
+  <section class="beat beat--tall" id="beat-apart" aria-labelledby="h-leist">
+    <div class="beat-inner">
+      <p class="kicker">Leistungen</p>
+      <h2 id="h-leist">Fünf Leistungen. Ein Haus.</h2>
+      <p class="lead">Verkauf, Kauf, Vermietung, Bewertung und Verwaltung: Sie haben bei CMB einen festen Ansprechpartner und keine Nummer im Vorgang.</p>
+      <ul class="etagen-text">
+        <li><strong>Bewertung</strong>Marktwert, Potenzial und Chancen Ihrer Immobilie.</li>
+        <li><strong>Verkauf &amp; Kauf</strong>Vom Exposé bis zur Übergabe, bis zum Notartermin begleitet.</li>
+        <li><strong>Vermietung</strong>Häuser und Wohnungen in bester Lage.</li>
+        <li><strong>Verwaltung</strong>Miet- und Wohnungseigentumsverwaltung.</li>
+      </ul>
+      <p style="margin-top:1.6rem"><a class="btn btn--light" href="leistungen.html">Alle Leistungen</a></p>
+    </div>
+  </section>
+  <section class="beat beat--tall" id="beat-around" aria-labelledby="h-werte">
+    <div class="beat-inner">
+      <p class="kicker">Werte</p>
+      <h2 id="h-werte">Transparent. Persönlich. Verlässlich.</h2>
+      <p class="lead">Sie wissen bei jedem Schritt, wo Ihr Verkauf oder Ihre Vermietung steht. Kompetenz, Seriosität, Diskretion und Service: traditionelle Werte in einem modernen Unternehmen.</p>
+    </div>
+  </section>
+  <section class="beat" id="beat-outro" aria-labelledby="h-gespr">
+    <div class="beat-inner">
+      <p class="kicker">Kontakt</p>
+      <h2 id="h-gespr">Sprechen wir über Ihre Immobilie.</h2>
+      <p class="lead">Ein erstes Gespräch ist unverbindlich. Mo–Fr, 10–18 Uhr.</p>
+      <div class="btn-row"><a class="btn btn--gold" href="tel:+492104175052">0 21 04 - 17 50 52</a><a class="btn btn--light" href="kontakt.html">Nachricht schreiben</a></div>
+    </div>
+  </section>
+</div>
+
+<section class="tiles-wrap" aria-labelledby="kacheln-titel">
+  <div class="wrap">
+    <h2 id="kacheln-titel" style="color:#fff;text-align:center;margin:0 0 2.6rem">Was wir für Sie tun</h2>
+    <div class="tiles">
+      <a class="tile" href="verkaufen.html"><img src="assets/video/kueste.jpg" alt="" loading="lazy"><span>Verkauf<small>Persönlich bis zur Übergabe</small></span></a>
+      <a class="tile" href="angebote.html?art=kauf"><img src="assets/video/chalet.jpg" alt="" loading="lazy"><span>Kaufen<small>Aktuelle Angebote ansehen</small></span></a>
+      <a class="tile" href="vermieten.html"><img src="assets/video/teich.jpg" alt="" loading="lazy"><span>Vermietung<small>Bester Lage, breiter Kundenstamm</small></span></a>
+      <a class="tile" href="leistungen.html#verwaltung"><img src="assets/video/viertel.jpg" alt="" loading="lazy"><span>Verwaltung<small>Miete und WEG</small></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="angebote" aria-labelledby="obj-titel">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="obj-titel">Aktuelle Angebote</h2>
+      <p>Häuser und Wohnungen zum Kauf und zur Miete in Mettmann und Umgebung. Jedes Angebot öffnet sich auf Immowelt mit dem vollständigen Exposé.</p>
+    </div>
+    <p><a class="btn btn--primary" href="angebote.html?art=kauf">Kaufangebote ansehen</a> <a class="btn btn--ghost" href="angebote.html?art=miete">Mietangebote ansehen</a></p>
+  </div>
+</section>
+
+<section class="section section--paper" aria-labelledby="team-titel">
+  <div class="wrap team-teaser">
+    <div>
+      <h2 id="team-titel">Menschen, nicht Nummern.</h2>
+      <p class="lead">Ilona Tatura führt CMB als Inhaberin und Immobilienfachwirtin, unterstützt von Renata Teitge und Fatlinda Geci im Innendienst. Und Hugo ist die rechte Hand der Chefin.</p>
+      <a class="btn btn--ghost" href="ueber-uns.html">Das Team kennenlernen</a>
+    </div>
+    <img src="assets/img/team-cmb.webp" alt="Das CMB-Team: Renata Teitge, Ilona Tatura und Fatlinda Geci mit Hugo" loading="lazy" onerror="this.remove()">
+  </div>
+</section>
+
+<section class="section section--navy vband" aria-labelledby="gebiete-titel">
+  <div class="vbg" aria-hidden="true"><video muted loop playsinline preload="none" poster="assets/video/viertel.jpg" data-src="assets/video/viertel.mp4"></video></div>
+  <div class="wrap vband-inner reveal">
+    <h2 id="gebiete-titel">Wir vermitteln dort, wo Sie zu Hause sind.</h2>
+    <ul class="areas">
+      <li><a href="leistungen.html#gebiet-mettmann">Mettmann</a></li>
+      <li><a href="leistungen.html#gebiet-ratingen">Ratingen</a></li>
+      <li><a href="leistungen.html#gebiet-wuelfrath">Wülfrath</a></li>
+      <li><a href="leistungen.html#gebiet-haan">Haan und Gruiten</a></li>
+      <li><a href="leistungen.html#gebiet-erkrath">Erkrath und Hochdahl</a></li>
+      <li><a href="leistungen.html#gebiet-heiligenhaus">Heiligenhaus</a></li>
+      <li><a href="leistungen.html#gebiet-duesseldorf">Düsseldorf</a></li>
+      <li><a href="leistungen.html#gebiet-solingen">Solingen</a></li>
+    </ul>
+    <p class="areas-note">Auch in weiteren Gebieten helfen wir Ihnen mit kompetenten Immobilienpartnern. Mit Partnern in Spanien vermitteln wir außerdem Auslandsimmobilien als Kapitalanlage oder Ferienobjekt.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="stimmen-titel">
+  <div class="wrap reveal">
+    <h2 id="stimmen-titel">Was Kunden über CMB berichten</h2>
+    <div class="quotes">
+      <figure class="quote-main" style="margin:0">
+        <span class="stars" aria-label="5 von 5 Sternen">★★★★★</span>
+        <blockquote>
+          <p>„Frau Tatura führt hier mit großer Professionalität ein ausgesprochen fähiges und sehr freundliches Team. Beim Verkauf unseres Objekts wurden wir immer auf dem Laufenden gehalten, sodass wir über jeden Schritt genau informiert waren.“</p>
+        </blockquote>
+        <figcaption class="quote-by">R.E. Rad<span>, Kunde von CMB</span></figcaption>
+      </figure>
+      <div class="quote-side">
+        <figure style="margin:0"><blockquote><p>„Immer erreichbar, engagiert und zuverlässig! Wir haben unser Traumhaus gefunden. Vielen Dank an CMB und Frau Tatura.“</p></blockquote><figcaption class="quote-by">Christos M.<span>, Kunde von CMB</span></figcaption></figure>
+        <figure style="margin:0"><blockquote><p>„Ausgeprägte Fachkompetenz, ein freundlicher und seriöser Umgang, spontane Besichtigungen, aussagekräftige Exposés und das gesamte Handwerkszeug eines guten Maklers.“</p></blockquote><figcaption class="quote-by">Dirk O.<span>, Kunde von CMB</span></figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--navy">
+  <div class="wrap cta">
+    <div>
+      <h2>Sprechen wir über Ihre Immobilie.</h2>
+      <p class="lead">Ein erstes Gespräch ist unverbindlich. Rufen Sie uns an oder schreiben Sie uns, wir melden uns schnellstmöglich.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="cta-phone" href="tel:+492104175052">0 21 04 - 17 50 52</a>
+      <a class="btn btn--gold" href="kontakt.html">Nachricht schreiben</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="index.html" aria-label="CMB Immobilien, zur Startseite"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+  <path d="M8 33 32 12l24 21M14 30v24h36V30" fill="none" stroke="#a8cd4e" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M32 47c-8-5.500-9.500-10-7-13.500 2.300-2.800 5.800-2.200 7 .2 1.200-2.400 4.700-3 7-.2 2.500 3.500 1 8-7 13.500z" fill="#a8cd4e"/>
+</svg>
+      <span class="logo-text"><strong>CMB</strong><span>Immobilien</span></span></a>
+        <p>Ihr Makler mit Herz und Verstand. Ansprechpartner für Verkauf, Kauf, Vermietung und Verwaltung von Wohn- und Gewerbeimmobilien.</p>
+      </div>
+      <div>
+        <h2>Seiten</h2>
+        <ul>
+          <li><a href="index.html">Start</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="angebote.html">Angebote</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Leistungen</h2>
+        <ul>
+          <li><a href="verkaufen.html">Verkauf</a></li>
+          <li><a href="angebote.html?art=kauf">Kaufen</a></li>
+          <li><a href="angebote.html?art=miete">Mieten</a></li>
+          <li><a href="vermieten.html">Vermietung</a></li>
+          <li><a href="leistungen.html#bewertung">Bewertung</a></li>
+          <li><a href="leistungen.html#verwaltung">Verwaltung</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Kontakt</h2>
+        <p>Poststraße 16<br>40822 Mettmann</p>
+        <p>Tel. <a href="tel:+492104175052">0 21 04 - 17 50 52</a><br>
+        Mobil <a href="tel:+491735420100">0173 - 5420100</a><br>
+        <a href="mailto:info@cmb-immobilien.com">info@cmb-immobilien.com</a></p>
+        <p>Mo–Fr 10:00–18:00 Uhr</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="jahr">2026</span> CMB Immobilien. Alle Rechte vorbehalten.</span>
+      <ul>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+        <li><a href="https://www.instagram.com/makeln_mit__herz_und_verstand/?hl=de" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.facebook.com/cmbimmobilien/?ref=page_internal" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/objekte.js" defer></script><script src="assets/js/video.js" defer></script><script src="assets/js/hero3d.js" defer></script>
+</body>
+</html>
