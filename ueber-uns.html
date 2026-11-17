@@ -68,24 +68,48 @@
     </div>
     <ul class="team">
       <li>
-        <div class="member-photo"><span aria-hidden="true">IT</span><img src="assets/img/team/ilona.jpg" alt="Foto von Ilona Tatura" loading="lazy" onerror="this.remove()"></div>
-        <h3>Ilona Tatura</h3>
-        <p>Inhaberin und Immobilienfachwirtin</p>
+        <details class="member">
+          <summary>
+            <div class="member-photo"><span aria-hidden="true">IT</span><img src="assets/img/team/ilona.jpg" alt="Foto von Ilona Tatura" loading="lazy" onerror="this.remove()"></div>
+            <h3>Ilona Tatura</h3>
+            <p>Inhaberin und Immobilienfachwirtin</p>
+            <span class="member-more">Kontakt anzeigen</span>
+          </summary>
+          <ul class="member-contact"><li><span>Telefon</span><a href="tel:+492104175052">0 21 04 - 17 50 52</a></li><li><span>E-Mail</span><a href="mailto:ilona.tatura@cmb-immobilien.com">ilona.tatura@cmb-immobilien.com</a></li></ul>
+        </details>
       </li>
       <li>
-        <div class="member-photo"><span aria-hidden="true">RT</span><img src="assets/img/team/renata.jpg" alt="Foto von Renata Teitge" loading="lazy" onerror="this.remove()"></div>
-        <h3>Renata Teitge</h3>
-        <p>Innendienst</p>
+        <details class="member">
+          <summary>
+            <div class="member-photo"><span aria-hidden="true">RT</span><img src="assets/img/team/renata.jpg" alt="Foto von Renata Teitge" loading="lazy" onerror="this.remove()"></div>
+            <h3>Renata Teitge</h3>
+            <p>Innendienst</p>
+            <span class="member-more">Kontakt anzeigen</span>
+          </summary>
+          <ul class="member-contact"><li><span>Telefon</span><a href="tel:+492104175052">0 21 04 - 17 50 52</a></li><li><span>E-Mail</span><a href="mailto:renata.teitge@cmb-immobilien.com">renata.teitge@cmb-immobilien.com</a></li></ul>
+        </details>
       </li>
       <li>
-        <div class="member-photo"><span aria-hidden="true">FG</span><img src="assets/img/team/fatlinda.jpg" alt="Foto von Fatlinda Geci" loading="lazy" onerror="this.remove()"></div>
-        <h3>Fatlinda Geci</h3>
-        <p>Innendienst</p>
+        <details class="member">
+          <summary>
+            <div class="member-photo"><span aria-hidden="true">FG</span><img src="assets/img/team/fatlinda.jpg" alt="Foto von Fatlinda Geci" loading="lazy" onerror="this.remove()"></div>
+            <h3>Fatlinda Geci</h3>
+            <p>Innendienst</p>
+            <span class="member-more">Kontakt anzeigen</span>
+          </summary>
+          <ul class="member-contact"><li><span>Telefon</span><a href="tel:+492104175052">0 21 04 - 17 50 52</a></li><li><span>24/7 erreichbar</span><a href="tel:+4917650474167">+49 176 50474167</a></li><li><span>E-Mail</span><a href="mailto:fatlinda.geci@cmb-immobilien.com">fatlinda.geci@cmb-immobilien.com</a></li></ul>
+        </details>
       </li>
       <li>
-        <div class="member-photo"><span aria-hidden="true">H</span><img src="assets/img/team/hugo.jpg" alt="Foto von Hugo" loading="lazy" onerror="this.remove()"></div>
-        <h3>Hugo</h3>
-        <p>Die rechte Hand der Chefin</p>
+        <details class="member">
+          <summary>
+            <div class="member-photo"><span aria-hidden="true">H</span><img src="assets/img/team/hugo.jpg" alt="Foto von Hugo" loading="lazy" onerror="this.remove()"></div>
+            <h3>Hugo</h3>
+            <p>Die rechte Hand der Chefin</p>
+            <span class="member-more">Mehr über Hugo</span>
+          </summary>
+          <p class="member-note">Der treue Begleiter im Büro: Hugo begrüßt jeden Gast mit wedelndem Schwanz und sorgt für gute Laune.</p>
+        </details>
       </li>
     </ul>
   </div>
@@ -103,6 +127,13 @@
     </div>
   </div>
 </section>
+<script>
+document.querySelectorAll("details.member").forEach(function (d) {
+  d.addEventListener("toggle", function () {
+    if (d.open) { document.querySelectorAll("details.member[open]").forEach(function (o) { if (o !== d) { o.open = false; } }); }
+  });
+});
+</script>
 </main>
 <footer class="site-footer">
   <div class="wrap">
