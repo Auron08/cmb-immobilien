@@ -1,9 +1,12 @@
+# Wird stuendlich von der Windows-Aufgabenplanung gestartet (eingerichtet durch einrichten-windows.ps1).
+# Holt die Angebote von Immowelt und laedt Aenderungen zu GitHub hoch. Ergebnis steht in sync-log.txt.
 $ErrorActionPreference = "Continue"
 $repo = Split-Path -Parent $MyInvocation.MyCommand.Path
 Set-Location $repo
 $log = Join-Path $repo "sync-log.txt"
 function Log($text) { ("{0}  {1}" -f (Get-Date -Format "yyyy-MM-dd HH:mm"), $text) | Add-Content -Path $log -Encoding UTF8 }
 
+# Python finden (python oder py)
 $py = "python"
 if (-not (Get-Command python -ErrorAction SilentlyContinue)) { $py = "py" }
 

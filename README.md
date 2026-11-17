@@ -58,12 +58,13 @@ Eigene Seite für Verkäufer: Art der Immobilie, Straße/PLZ/Ort, Wohn- und Grun
 
 ## Angebote automatisch von Immowelt (kein Excel mehr nötig)
 
-Die Datei `.github/workflows/immowelt-sync.yml` startet alle 3 Stunden `tools/immowelt-sync.py`. Das Skript liest das öffentliche
-Immowelt-Profil von CMB Immobilien, schreibt `data/objekte.json` neu und lädt die Objektbilder nach `assets/img/objekte/`.
-Neue Angebote erscheinen dadurch automatisch, verkaufte oder gelöschte verschwinden mit ihrem Bild. Ein Commit entsteht nur bei Änderungen,
-danach baut GitHub Pages die Seite neu.
+Immowelt sperrt die Server von GitHub (HTTP 403), deshalb läuft der Abgleich auf einem normalen Windows-PC (z. B. im Büro):
 
-- Sofort aktualisieren: im GitHub-Repository **Actions → "Angebote von Immowelt abgleichen" → Run workflow**.
-- Schlägt der Abruf fehl (Immowelt sperrt oder ändert das Format), bleiben die alten Daten unverändert und der Lauf wird rot angezeigt.
+1. Auf dem PC `einrichten-windows.ps1` per Rechtsklick → "Mit PowerShell ausführen" starten. Das installiert Git und Python (falls nötig), holt den Ordner nach `C:\CMB-Website`, testet den Abruf und richtet eine stündliche Aufgabe ein.
+2. Beim ersten Hochladen öffnet sich ein GitHub-Anmeldefenster.
+3. Danach startet `sync-windows.ps1` stündlich (solange der PC an und angemeldet ist). `tools/immowelt-sync.py` liest das öffentliche Immowelt-Profil, schreibt `data/objekte.json` neu und lädt die Bilder nach `assets/img/objekte/`. Neue Angebote erscheinen, verkaufte verschwinden mit ihrem Bild. Geändert wird nur bei Unterschieden, danach baut GitHub Pages die Seite neu.
+4. Ergebnis jedes Laufs: `C:\CMB-Website\sync-log.txt`.
+
+- Schlägt der Abruf fehl, bleiben die alten Daten unverändert.
 - Das Feld `zusatz` (z. B. "als Kapitalanlage geeignet") bleibt erhalten, wenn du es in `data/objekte.json` von Hand einträgst.
-- Lokal testen: `python tools/immowelt-sync.py`.
+- Manuell: `python tools/immowelt-sync.py`, dann mit Git hochladen.

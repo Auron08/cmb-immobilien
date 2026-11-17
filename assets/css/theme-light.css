@@ -227,3 +227,7 @@ html, body { overflow-x: clip; max-width: 100%; }
   .etagen-text span, .etagen-text li { color: #fff; }
   #story .beat-inner p, #story .beat-inner h2, #story .beat-inner h3 { color: #fff; }
 }
+
+/* Logo (Bild) in der Kopfzeile */
+.logo--bild { display: inline-block; }
+.logo-img { display: block; height: auto; width: clamp(150px, 46vw, 250px); }
