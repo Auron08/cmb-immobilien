@@ -238,3 +238,7 @@ html, body { overflow-x: clip; max-width: 100%; }
 @media (min-width: 961px) and (max-width: 1180px) { .logo-img { width: 200px; } .nav ul { gap: 1.1rem; } }
 .logo--bild { flex: none; }
 @media (min-width: 961px) and (max-width: 1180px) { .logo-img { width: 175px; } .nav .btn { padding-inline: 1rem; font-size: .8rem; letter-spacing: .12em; } .nav-link { letter-spacing: .1em; } }
+
+/* Lange Überschrift "Schadenbeurteilung" bricht sauber um und läuft nicht in den Text */
+.service-block h2 { overflow-wrap: break-word; hyphens: manual; }
+#schadenbeurteilung h2 { font-size: clamp(1.7rem, 2.7vw, 2.2rem); }
