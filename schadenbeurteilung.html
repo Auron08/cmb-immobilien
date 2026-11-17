@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Schadenbeurteilung | CMB Immobilien Mettmann</title>
+  <meta name="description" content="Schadenbeurteilung durch IHK-zertifizierte Experten: Bauschäden vor Ort bewerten, Ursache und Ausmaß ermitteln, Sanierungskonzept mit Kostenschätzung.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="CMB Immobilien">
+  <meta property="og:title" content="Schadenbeurteilung | CMB Immobilien Mettmann">
+  <meta property="og:description" content="Schadenbeurteilung durch IHK-zertifizierte Experten: Bauschäden vor Ort bewerten, Ursache und Ausmaß ermitteln, Sanierungskonzept mit Kostenschätzung.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/tenor-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/montserrat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <link rel="stylesheet" href="assets/css/form.css">
+  <link rel="stylesheet" href="assets/css/schaden.css">
+  <script src="assets/js/schaden.js" defer></script>
+  <link rel="stylesheet" href="assets/css/theme-light.css">
+</head>
+<body>
+<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo logo--bild" href="index.html" aria-label="CMB Immobilien, zur Startseite"><img class="logo-img" src="assets/img/logo-cmb.svg" alt="CMB Immobilien" width="982" height="72"></a>
+    <button class="nav-toggle" type="button" aria-controls="hauptmenue" aria-expanded="false" aria-label="Menü öffnen"><span></span></button>
+    <nav class="nav" id="hauptmenue" aria-label="Hauptmenü">
+      <ul>
+        <li><a class="nav-link" href="index.html">Start</a></li>
+        <li><a class="nav-link" href="ueber-uns.html">Über uns</a></li>
+        <li><a class="nav-link" href="leistungen.html">Leistungen</a></li>
+        <li><a class="nav-link" href="angebote.html">Angebote</a></li>
+        <li><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+      </ul>
+      <a class="btn btn--primary" href="kontakt.html?anliegen=Bewertung">Bewertung anfragen</a>
+    </nav>
+  </div>
+</header>
+<main id="inhalt">
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Schadenbeurteilung</h1>
+    <p class="lead">Als IHK-zertifizierte Experten bieten wir ab sofort auch die fachgerechte Schadenbeurteilung für Ihre Immobilie an.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap contact-grid">
+    <div>
+      <h2 style="font-size:1.3rem;margin-bottom:1.2rem">Das leisten wir für Sie</h2>
+      <p>Wir untersuchen und bewerten Bauschäden systematisch vor Ort, ermitteln die genaue Ursache sowie das Ausmaß und erstellen ein fundiertes Sanierungskonzept inklusive Kostenschätzung.</p>
+      <ul class="checks">
+        <li>Systematische Untersuchung und Bewertung vor Ort</li>
+        <li>Genaue Ursache und Ausmaß des Schadens</li>
+        <li>Fundiertes Sanierungskonzept</li>
+        <li>Kostenschätzung für die Sanierung</li>
+        <li>Beurteilung durch IHK-zertifizierte Experten</li>
+      </ul>
+      <dl class="contact-list" style="margin-top:2rem">
+        <div><dt>Lieber direkt sprechen?</dt><dd><a href="tel:+492104175052">0 21 04 - 17 50 52</a></dd></div>
+        <div><dt>Mobil</dt><dd><a href="tel:+491735420100">0173 - 5420100</a></dd></div>
+        <div><dt>Erreichbar</dt><dd>Montag bis Freitag, 10:00–18:00 Uhr</dd></div>
+      </dl>
+    </div>
+
+    <div class="anfrage" id="anfrage-box">
+      <h2>Fragebogen zur Schadenbeurteilung</h2>
+      <p style="color:var(--muted);margin:0 0 .5rem">Beschreiben Sie uns den Schaden. Wir melden uns persönlich bei Ihnen, um das weitere Vorgehen und einen Termin vor Ort zu besprechen. Ihre Anfrage ist unverbindlich.</p>
+      <form id="schaden" novalidate>
+        <input type="hidden" name="access_key" value="HIER-WEB3FORMS-ACCESS-KEY-EINTRAGEN">
+        <input type="hidden" name="from_name" value="Website CMB Immobilien">
+        <input type="hidden" name="subject" value="Neue Anfrage Schadenbeurteilung">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <h3 class="sd-titel">Zur Immobilie</h3>
+        <div class="f sel">
+          <select id="immobilienart" name="Immobilienart" required>
+            <option value="" selected disabled></option>
+            <option>Einfamilienhaus</option>
+            <option>Doppel- oder Reihenhaus</option>
+            <option>Mehrfamilienhaus</option>
+            <option>Eigentumswohnung</option>
+            <option>Gewerbeimmobilie</option>
+            <option>Sonstiges</option>
+          </select>
+          <label for="immobilienart">Immobilienart *</label><p class="msg"></p>
+        </div>
+        <div class="f"><input type="text" id="standort" name="Standort / PLZ" placeholder=" " autocomplete="postal-code" required><label for="standort">Standort / PLZ der Immobilie *</label><p class="msg"></p></div>
+
+        <h3 class="sd-titel">Zum Schaden</h3>
+        <fieldset class="sd-gruppe" id="schadensart">
+          <legend class="q">Schadensart * <small>(Mehrfachauswahl möglich)</small></legend>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="schadensart" value="Feuchtigkeit / Nässe"><span>Feuchtigkeit / Nässe</span></label>
+            <label class="chip"><input type="checkbox" name="schadensart" value="Schimmel"><span>Schimmel</span></label>
+            <label class="chip"><input type="checkbox" name="schadensart" value="Risse in Wand, Decke oder Fassade"><span>Risse</span></label>
+            <label class="chip"><input type="checkbox" name="schadensart" value="Wasserschaden"><span>Wasserschaden</span></label>
+            <label class="chip"><input type="checkbox" name="schadensart" value="Dach- oder Sturmschaden"><span>Dach- / Sturmschaden</span></label>
+            <label class="chip"><input type="checkbox" name="schadensart" value="Brandschaden"><span>Brandschaden</span></label>
+            <label class="chip"><input type="checkbox" name="schadensart" value="Setzung / Fundament"><span>Setzung / Fundament</span></label>
+            <label class="chip"><input type="checkbox" name="schadensart" value="Baumängel nach Neubau oder Sanierung"><span>Baumängel</span></label>
+            <label class="chip"><input type="checkbox" name="schadensart" value="Sonstiges"><span>Sonstiges</span></label>
+          </div>
+          <p class="msg-block" id="schadensart-msg" role="alert"></p>
+        </fieldset>
+        <div class="f sel">
+          <select id="anlass" name="Anlass der Beurteilung" required>
+            <option value="" selected disabled></option>
+            <option>Kauf oder Verkauf der Immobilie</option>
+            <option>Versicherungsschaden</option>
+            <option>Streit zwischen Mieter und Vermieter</option>
+            <option>Sanierung planen</option>
+            <option>Mängel nach Neubau oder Sanierung</option>
+            <option>Zustandsprüfung / Vorsorge</option>
+            <option>Sonstiges</option>
+          </select>
+          <label for="anlass">Anlass der Beurteilung *</label><p class="msg"></p>
+        </div>
+        <div class="f"><textarea id="beschreibung" name="Schadensbeschreibung" placeholder=" " required></textarea><label for="beschreibung">Schadensbeschreibung *</label><p class="msg"></p></div>
+        <p class="sd-hinweis">Wo ist der Schaden, seit wann besteht er und was ist bisher passiert?</p>
+
+        <div class="sd-upload">
+          <label class="q" for="fotos">Fotos des Schadens <small>(optional, bis zu 5 Bilder)</small></label>
+          <input type="file" id="fotos" name="fotos" accept="image/*" multiple>
+          <ul id="foto-liste" class="foto-liste" aria-live="polite"></ul>
+        </div>
+
+        <h3 class="sd-titel">Ihre Kontaktdaten</h3>
+        <div class="f"><input type="text" id="sd-name" name="name" placeholder=" " autocomplete="name" required><label for="sd-name">Name *</label><p class="msg"></p></div>
+        <div class="two">
+          <div class="f"><input type="email" id="sd-email" name="email" placeholder=" " autocomplete="email" required><label for="sd-email">E-Mail *</label><p class="msg"></p></div>
+          <div class="f"><input type="tel" id="sd-tel" name="Telefon" placeholder=" " autocomplete="tel" pattern="[0-9 +\(\)\/\-]{6,}" required><label for="sd-tel">Telefon *</label><p class="msg"></p></div>
+        </div>
+        <div class="f sel">
+          <select id="erreichbar" name="Beste Erreichbarkeit">
+            <option value="" selected></option>
+            <option>Vormittags</option>
+            <option>Nachmittags</option>
+            <option>Abends</option>
+            <option>Egal</option>
+          </select>
+          <label for="erreichbar">Beste Erreichbarkeit (optional)</label><p class="msg"></p>
+        </div>
+        <label class="consent2"><input type="checkbox" name="datenschutz" value="akzeptiert"><span>Ich habe die <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen und bin damit einverstanden, dass meine Angaben und Fotos zur Bearbeitung meiner Anfrage verwendet werden. *</span></label>
+
+        <p class="form-err" id="sd-err" role="alert" aria-live="assertive"></p>
+        <div class="nav-row"><button type="submit" class="btn btn--primary" id="sd-senden">Schadenbeurteilung anfragen</button></div>
+      </form>
+      <div class="ok" id="sd-ok" hidden>
+        <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 54C12 40 8 26 14 18c5-6 14-5 18 2 4-7 13-8 18-2 6 8 2 22-18 36z" fill="#a8cd4e"/></svg>
+        <h3 tabindex="-1">Vielen Dank, Ihre Anfrage ist bei uns.</h3>
+        <p id="sd-ok-text">Wir melden uns schnellstmöglich bei Ihnen. Eilig? Rufen Sie uns an: <a href="tel:+492104175052">0 21 04 - 17 50 52</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo logo--bild logo--hell" href="index.html" aria-label="CMB Immobilien, zur Startseite"><img class="logo-img" src="assets/img/logo-cmb-hell.svg" alt="CMB Immobilien" width="982" height="72"></a>
+        <p>Ihr Makler mit Herz und Verstand. Ansprechpartner für Verkauf, Kauf, Vermietung und Verwaltung von Wohn- und Gewerbeimmobilien.</p>
+      </div>
+      <div>
+        <h2>Seiten</h2>
+        <ul>
+          <li><a href="index.html">Start</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="angebote.html">Angebote</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Leistungen</h2>
+        <ul>
+          <li><a href="verkaufen.html">Verkauf</a></li>
+          <li><a href="angebote.html?art=kauf">Kaufen</a></li>
+          <li><a href="angebote.html?art=miete">Mieten</a></li>
+          <li><a href="vermieten.html">Vermietung</a></li>
+          <li><a href="leistungen.html#bewertung">Bewertung</a></li>
+          <li><a href="schadenbeurteilung.html">Schadenbeurteilung</a></li>
+          <li><a href="leistungen.html#verwaltung">Verwaltung</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Kontakt</h2>
+        <p>Poststraße 16<br>40822 Mettmann</p>
+        <p>Tel. <a href="tel:+492104175052">0 21 04 - 17 50 52</a><br>
+        Mobil <a href="tel:+491735420100">0173 - 5420100</a><br>
+        <a href="mailto:info@cmb-immobilien.com">info@cmb-immobilien.com</a></p>
+        <p>Mo–Fr 10:00–18:00 Uhr</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="jahr">2026</span> CMB Immobilien. Alle Rechte vorbehalten.</span>
+      <ul>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+        <li><a href="https://www.instagram.com/makeln_mit__herz_und_verstand/?hl=de" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.facebook.com/cmbimmobilien/?ref=page_internal" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js" defer></script>
+
+</body>
+</html>
