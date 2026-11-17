@@ -201,3 +201,17 @@ body.home main > section.tiles-wrap:not(#story) { background: linear-gradient(18
 .searchbar .sb-liste li:hover, .searchbar .sb-liste li[aria-selected=true] { background: #f4f3ef; }
 .page-hero--slim { min-height: 0; padding-block: 3.2rem 2.6rem; }
 .page-hero--slim h1 { font-size: clamp(1.8rem, 4.2vw, 3rem); }
+
+/* Team: Karte klappt beim Anklicken Kontaktdaten auf */
+details.member { display: block; }
+details.member > summary { list-style: none; cursor: pointer; }
+details.member > summary::-webkit-details-marker { display: none; }
+details.member > summary:focus-visible { outline: 2px solid #8dc63f; outline-offset: 4px; }
+.member-more { display: inline-block; margin-top: .7rem; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: #111; border-bottom: 1px solid #8dc63f; padding-bottom: 2px; }
+details.member[open] .member-more { opacity: .5; }
+.member-contact { list-style: none; margin: 1rem 0 0; padding: 1rem 0 0; border-top: 1px solid #e0ded8; display: grid; gap: .6rem; }
+.member-contact li { display: grid; gap: .1rem; }
+.member-contact span { font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: #85827b; }
+.member-contact a { color: #111; font-weight: 500; text-decoration: none; word-break: break-word; }
+.member-contact a:hover { text-decoration: underline; }
+.member-note { margin: 1rem 0 0; padding-top: 1rem; border-top: 1px solid #e0ded8; font-style: italic; color: #111; }
