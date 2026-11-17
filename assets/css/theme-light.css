@@ -230,4 +230,11 @@ html, body { overflow-x: clip; max-width: 100%; }
 
 /* Logo (Bild) in der Kopfzeile */
 .logo--bild { display: inline-block; }
-.logo-img { display: block; height: auto; width: clamp(150px, 46vw, 250px); }
+.logo-img { display: block; height: auto; width: clamp(170px, 56vw, 250px); }
+
+.logo--hell .logo-img { width: clamp(200px, 60vw, 300px); }
+
+.nav .nav-link, .nav .btn { white-space: nowrap; }
+@media (min-width: 961px) and (max-width: 1180px) { .logo-img { width: 200px; } .nav ul { gap: 1.1rem; } }
+.logo--bild { flex: none; }
+@media (min-width: 961px) and (max-width: 1180px) { .logo-img { width: 175px; } .nav .btn { padding-inline: 1rem; font-size: .8rem; letter-spacing: .12em; } .nav-link { letter-spacing: .1em; } }
