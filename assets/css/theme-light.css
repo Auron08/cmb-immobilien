@@ -242,3 +242,10 @@ html, body { overflow-x: clip; max-width: 100%; }
 /* Lange Überschrift "Schadenbeurteilung" bricht sauber um und läuft nicht in den Text */
 .service-block h2 { overflow-wrap: break-word; hyphens: manual; }
 #schadenbeurteilung h2 { font-size: clamp(1.7rem, 2.7vw, 2.2rem); }
+
+/* Sechs Kacheln auf der Startseite: 3 x 2, mobil 2 x 3 */
+.tiles { grid-template-columns: repeat(3, 1fr); }
+.tile { aspect-ratio: 4/3.4; }
+@media (max-width: 900px) { .tiles { grid-template-columns: 1fr 1fr; } .tile { aspect-ratio: 4/5; } .tile span { font-size: .92rem; letter-spacing: .1em; } }
+.tile span { padding: 0 .6rem; overflow-wrap: break-word; hyphens: manual; }
+@media (max-width: 900px) { .tile span { font-size: .8rem; letter-spacing: .06em; } }
