@@ -249,3 +249,13 @@ html, body { overflow-x: clip; max-width: 100%; }
 @media (max-width: 900px) { .tiles { grid-template-columns: 1fr 1fr; } .tile { aspect-ratio: 4/5; } .tile span { font-size: .92rem; letter-spacing: .1em; } }
 .tile span { padding: 0 .6rem; overflow-wrap: break-word; hyphens: manual; }
 @media (max-width: 900px) { .tile span { font-size: .8rem; letter-spacing: .06em; } }
+
+/* Neue Teamfotos (runde Porträts mit grünem Rahmen) */
+.member-photo { aspect-ratio: 1 / 1; background: transparent; }
+.member-photo span { display: none; }
+.member-photo img, .member-photo img[src$="ilona.jpg"] { object-fit: contain; object-position: center; mix-blend-mode: multiply; }
+.team-teaser img { mix-blend-mode: multiply; }
+.team-foto { display: block; width: 100%; max-width: 30rem; height: auto; margin: 2rem 0 0; mix-blend-mode: multiply; }
+.split-links h2 { margin: 0; }
+.split-links .team-foto { max-width: 22rem; margin: 2.2rem 0 0; }
+@media (max-width: 900px) { .split-links .team-foto { margin: 1.6rem auto 0; max-width: 18rem; } }
