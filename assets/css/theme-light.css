@@ -398,3 +398,7 @@ html.dlg-offen { overflow: hidden; }
 .btn--ghost:hover, .btn--light:hover, .hero-video .btn--ghost:hover, .hero-video .btn--light:hover, .btn--outline:hover { background: var(--gruen-dunkel); border-color: var(--gruen-dunkel); color: var(--anthrazit); }
 .btn--primary, .btn--gold, .site-header .btn--primary { background: var(--gruen); border-color: var(--gruen); }
 .btn--primary:hover, .btn--gold:hover, .site-header .btn--primary:hover { background: var(--gruen-dunkel); border-color: var(--gruen-dunkel); }
+
+/* Gebiete-Buttons: grün gefüllt */
+.vband .areas a, .areas a { background: var(--gruen); border-color: var(--gruen); color: var(--anthrazit); backdrop-filter: none; -webkit-backdrop-filter: none; }
+.vband .areas a:hover, .areas a:hover { background: var(--gruen-dunkel); border-color: var(--gruen-dunkel); color: var(--anthrazit); }
