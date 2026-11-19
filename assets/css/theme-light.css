@@ -402,3 +402,8 @@ html.dlg-offen { overflow: hidden; }
 /* Gebiete-Buttons: grün gefüllt */
 .vband .areas a, .areas a { background: var(--gruen); border-color: var(--gruen); color: var(--anthrazit); backdrop-filter: none; -webkit-backdrop-filter: none; }
 .vband .areas a:hover, .areas a:hover { background: var(--gruen-dunkel); border-color: var(--gruen-dunkel); color: var(--anthrazit); }
+
+/* Datenschutzhinweis Social Media */
+.dsh { max-width: 60rem; }
+.dsh-titel { font-size: 1.15rem; letter-spacing: .12em; margin: 0 0 .8rem; color: var(--anthrazit); }
+.dsh p { margin: 0 0 .8rem; color: #5f5c56; }
