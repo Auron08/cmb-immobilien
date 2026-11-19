@@ -1,0 +1,20 @@
+.sd-titel { font-family: var(--serif); font-size: 1.15rem; margin: 2rem 0 .2rem; padding-top: 1.2rem; border-top: 1px solid #e6e4df; }
+.sd-titel:first-of-type { margin-top: 1.4rem; border-top: 0; padding-top: 0; }
+.sd-gruppe { border: 0; padding: 0; margin: 1.2rem 0 0; min-width: 0; }
+.sd-gruppe .q, .sd-upload .q { margin: 0 0 .6rem; padding: 0; }
+.q small { color: #85827b; font-weight: 400; }
+.f.sel select { width: 100%; padding: 1.65rem 2.4rem .55rem 1rem; border: 1px solid #cfcdc7; border-radius: 0; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%23111' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 1rem center; color: #2f3437; font: inherit; appearance: none; -webkit-appearance: none; cursor: pointer; }
+.f.sel select:focus { outline: none; border-color: #2f3437; box-shadow: 0 0 0 3px rgba(168,205,78,.35); }
+.f.sel label { position: absolute; left: 1rem; top: .45rem; font-size: .72rem; letter-spacing: .08em; color: #85827b; pointer-events: none; }
+.f.sel select:focus + label { color: var(--gold-text, #5b7a12); }
+.f.bad select, .f.bad input, .f.bad textarea { border-color: #c0392b; }
+.msg-block, .sd-hinweis { font-size: .85rem; margin: .5rem 0 0; }
+.msg-block { color: #c0392b; }
+.msg-block:empty { display: none; }
+.sd-hinweis { color: #85827b; margin-top: .4rem; }
+.sd-upload { margin-top: 1.4rem; }
+.sd-upload input[type=file] { width: 100%; padding: .9rem 1rem; border: 1px dashed #b9b6ae; background: #faf9f6; font: inherit; font-size: .92rem; cursor: pointer; }
+.sd-upload input[type=file]::file-selector-button { margin-right: 1rem; padding: .5rem 1rem; border: 1px solid #2f3437; background: #2f3437; color: #fff; font: inherit; cursor: pointer; }
+.foto-liste { list-style: none; margin: .7rem 0 0; padding: 0; font-size: .88rem; color: #55524d; }
+.foto-liste li { display: flex; justify-content: space-between; gap: 1rem; padding: .3rem 0; border-bottom: 1px solid #eeede9; }
+.foto-liste .bad { color: #c0392b; }
