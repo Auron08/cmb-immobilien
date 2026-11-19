@@ -201,8 +201,8 @@ function start() {
   renderer.toneMappingExposure = 1.05;
 
   const scene = new THREE.Scene();
-  scene.background = new THREE.Color(0x08090a);
-  scene.fog = new THREE.Fog(0x08090a, 38, 90);
+  scene.background = new THREE.Color(0x4b5357);
+  scene.fog = new THREE.Fog(0x4b5357, 38, 90);
   scene.environment = studioEnv(renderer);
   scene.environmentIntensity = 1.0;
 
@@ -211,7 +211,7 @@ function start() {
   scene.add(root);
 
   // Boden und Kontaktschatten
-  const floor = new THREE.Mesh(new THREE.CircleGeometry(46, 64), new THREE.MeshStandardMaterial({ color: 0x0b0c0e, roughness: 0.55, metalness: 0.55 }));
+  const floor = new THREE.Mesh(new THREE.CircleGeometry(46, 64), new THREE.MeshStandardMaterial({ color: 0x394043, roughness: 0.55, metalness: 0.55 }));
   floor.rotation.x = -Math.PI / 2;
   floor.position.y = -0.02;
   scene.add(floor);
