@@ -256,5 +256,265 @@
     "v": "Gaszentralheizung"
    }
   ]
+ },
+ {
+  "id": "meerbusch",
+  "art": "verkauft",
+  "titel": "Helle 3-Zimmer-Wohnung mit Loggia",
+  "ort": "Meerbusch-Büderich",
+  "kurz": "3 Zimmer · ca. 85 m²",
+  "bild": "assets/img/referenzen/meerbusch/cover.jpg",
+  "bilder": [
+   "assets/img/referenzen/meerbusch/01.jpg",
+   "assets/img/referenzen/meerbusch/02.jpg",
+   "assets/img/referenzen/meerbusch/03.jpg",
+   "assets/img/referenzen/meerbusch/04.jpg",
+   "assets/img/referenzen/meerbusch/05.jpg",
+   "assets/img/referenzen/meerbusch/06.jpg",
+   "assets/img/referenzen/meerbusch/07.jpg",
+   "assets/img/referenzen/meerbusch/08.jpg",
+   "assets/img/referenzen/meerbusch/09.jpg",
+   "assets/img/referenzen/meerbusch/10.jpg"
+  ],
+  "intro": "Wohnkomfort in einer Traditionsadresse vor den Toren Düsseldorfs.",
+  "text": [
+   "Diese gepflegte 3-Zimmer-Wohnung im zweiten Obergeschoss bietet auf rund 85 m² lichtdurchflutete Räume mit bodentiefen Fenstern, aufgearbeitetem Parkettboden und neuwertigen Bädern. Besonders hervorzuheben ist die nicht einsehbare Loggia, die vom Wohn- und Esszimmer aus erreichbar ist. Von der einladenden Diele gelangen Sie in alle Räume: Kochküche, Kinder- oder Arbeitszimmer, großzügiges Schlafzimmer, Duschbad mit großer Dusche und Doppelwaschtisch sowie Gäste-WC. Ein Tiefgaragenstellplatz und ein Kellerraum gehören dazu.",
+   "Büderich gilt seit gut einem Jahrhundert als Traditionsadresse vor den Toren Düsseldorfs. Wald, Rhein und Golfpark sind in wenigen Gehminuten erreichbar, der Ortskern mit Einkaufsmöglichkeiten, Kindergärten und Schulen ebenfalls schnell."
+  ],
+  "fakten": [
+   {
+    "k": "Art",
+    "v": "Eigentumswohnung"
+   },
+   {
+    "k": "Wohnfläche",
+    "v": "ca. 85 m²"
+   },
+   {
+    "k": "Zimmer",
+    "v": "3"
+   },
+   {
+    "k": "Baujahr",
+    "v": "1993, saniert"
+   },
+   {
+    "k": "Etage",
+    "v": "2. Obergeschoss von 3"
+   },
+   {
+    "k": "Heizung",
+    "v": "Gaszentralheizung"
+   },
+   {
+    "k": "Bäder",
+    "v": "Duschbad, Gäste-WC"
+   },
+   {
+    "k": "Außenbereich",
+    "v": "Loggia"
+   },
+   {
+    "k": "Stellplatz",
+    "v": "Tiefgarage"
+   }
+  ]
+ },
+ {
+  "id": "mettmann",
+  "art": "verkauft",
+  "titel": "Stilvolle Wohnung mit Loggia und Stellplatz",
+  "ort": "Mettmann",
+  "kurz": "2 Zimmer · ca. 58 m²",
+  "bild": "assets/img/referenzen/mettmann/cover.jpg",
+  "bilder": [
+   "assets/img/referenzen/mettmann/01.jpg",
+   "assets/img/referenzen/mettmann/02.jpg",
+   "assets/img/referenzen/mettmann/03.jpg",
+   "assets/img/referenzen/mettmann/04.jpg",
+   "assets/img/referenzen/mettmann/05.jpg",
+   "assets/img/referenzen/mettmann/06.jpg",
+   "assets/img/referenzen/mettmann/07.jpg",
+   "assets/img/referenzen/mettmann/08.jpg",
+   "assets/img/referenzen/mettmann/09.jpg",
+   "assets/img/referenzen/mettmann/10.jpg"
+  ],
+  "intro": "Einziehen und ankommen: modernisiert, hell und zentral gelegen.",
+  "text": [
+   "Diese Erdgeschosswohnung mit rund 58 m² liegt in einem gepflegten, umfassend modernisierten Mehrfamilienhaus mit Aufzug. Die Wohnung wurde kürzlich saniert und renoviert, unter anderem mit neuwertigem Laminatboden. Sie bietet zwei Zimmer, Küche, Diele, ein helles Duschbad mit Waschmaschinenanschluss, einen Abstellraum und eine Loggia. Das rund 20 m² große Wohnzimmer ist lichtdurchflutet und hat direkten Zugang zur Loggia. Ein Stellplatz und ein Kellerraum mit Stromanschluss runden das Angebot ab.",
+   "Die zentrale Lage in Mettmann bietet gute Anbindungen nach Düsseldorf, Köln, Ratingen und ins Ruhrgebiet. Einkaufsmöglichkeiten, Kindergärten und Schulen sind in der Nähe, die A3 ist in wenigen Fahrminuten erreichbar."
+  ],
+  "fakten": [
+   {
+    "k": "Art",
+    "v": "Etagenwohnung"
+   },
+   {
+    "k": "Wohnfläche",
+    "v": "ca. 58 m²"
+   },
+   {
+    "k": "Zimmer",
+    "v": "2"
+   },
+   {
+    "k": "Baujahr",
+    "v": "1969, saniert 2023"
+   },
+   {
+    "k": "Etage",
+    "v": "Erdgeschoss, mit Aufzug"
+   },
+   {
+    "k": "Heizung",
+    "v": "Ölzentralheizung, Anlage 2025 erneuert"
+   },
+   {
+    "k": "Bad",
+    "v": "Duschbad"
+   },
+   {
+    "k": "Außenbereich",
+    "v": "Loggia"
+   },
+   {
+    "k": "Extras",
+    "v": "Stellplatz, Kellerraum"
+   }
+  ]
+ },
+ {
+  "id": "noervenich",
+  "art": "verkauft",
+  "titel": "4-Zimmer-Wohnung mit Sonnenbalkon",
+  "ort": "Nörvenich-Wissersheim",
+  "kurz": "4 Zimmer · ca. 104 m²",
+  "bild": "assets/img/referenzen/noervenich/cover.jpg",
+  "bilder": [
+   "assets/img/referenzen/noervenich/01.jpg",
+   "assets/img/referenzen/noervenich/02.jpg",
+   "assets/img/referenzen/noervenich/03.jpg",
+   "assets/img/referenzen/noervenich/04.jpg",
+   "assets/img/referenzen/noervenich/05.jpg",
+   "assets/img/referenzen/noervenich/06.jpg",
+   "assets/img/referenzen/noervenich/07.jpg",
+   "assets/img/referenzen/noervenich/08.jpg",
+   "assets/img/referenzen/noervenich/09.jpg",
+   "assets/img/referenzen/noervenich/10.jpg",
+   "assets/img/referenzen/noervenich/11.jpg",
+   "assets/img/referenzen/noervenich/12.jpg",
+   "assets/img/referenzen/noervenich/13.jpg",
+   "assets/img/referenzen/noervenich/14.jpg"
+  ],
+  "intro": "Gepflegtes Wohnen im Grünen mit großem Balkon und Blick auf Wiesen und Felder.",
+  "text": [
+   "Die Vierzimmerwohnung im ersten Obergeschoss eines sehr gepflegten Mehrfamilienhauses bietet rund 104 m² Wohnfläche und einen überdurchschnittlich großen Sonnenbalkon mit Blick auf Wiesen und Felder. Es gibt eine Diele mit Garderobe, eine Essdiele mit offenem Wohnbereich, eine Kochküche mit hochwertiger Einbauküche, ein Schlafzimmer, zwei Kinder- oder Arbeitszimmer sowie ein saniertes Wannenbad und ein Gäste-Duschbad. Ein Kellerraum sowie Wasch-, Trocken- und Fahrradabstellmöglichkeiten gehören dazu.",
+   "Wissersheim gehört zu Nörvenich im Kreis Düren und eignet sich für alle, die naturnah wohnen möchten. Geschäfte, Ärzte, Schulen und Kitas sind vor Ort, drei Autobahnanschlüsse liegen nur wenige Fahrminuten entfernt."
+  ],
+  "fakten": [
+   {
+    "k": "Art",
+    "v": "Etagenwohnung"
+   },
+   {
+    "k": "Wohnfläche",
+    "v": "ca. 104 m²"
+   },
+   {
+    "k": "Zimmer",
+    "v": "4"
+   },
+   {
+    "k": "Baujahr",
+    "v": "1969"
+   },
+   {
+    "k": "Etage",
+    "v": "1. Obergeschoss von 2"
+   },
+   {
+    "k": "Heizung",
+    "v": "Ölzentralheizung"
+   },
+   {
+    "k": "Bäder",
+    "v": "Wannenbad, Gäste-Duschbad/WC"
+   },
+   {
+    "k": "Außenbereich",
+    "v": "Sonnenbalkon"
+   }
+  ]
+ },
+ {
+  "id": "solingen-verkauf",
+  "art": "verkauft",
+  "titel": "Kernsaniertes Zweifamilienhaus mit Garten",
+  "ort": "Solingen-Ohligs",
+  "kurz": "6 Zimmer · ca. 181 m² · 693 m² Grundstück",
+  "bild": "assets/img/referenzen/solingen-verkauf/cover.jpg",
+  "bilder": [
+   "assets/img/referenzen/solingen-verkauf/01.jpg",
+   "assets/img/referenzen/solingen-verkauf/02.jpg",
+   "assets/img/referenzen/solingen-verkauf/03.jpg",
+   "assets/img/referenzen/solingen-verkauf/04.jpg",
+   "assets/img/referenzen/solingen-verkauf/05.jpg",
+   "assets/img/referenzen/solingen-verkauf/06.jpg",
+   "assets/img/referenzen/solingen-verkauf/07.jpg",
+   "assets/img/referenzen/solingen-verkauf/08.jpg",
+   "assets/img/referenzen/solingen-verkauf/09.jpg",
+   "assets/img/referenzen/solingen-verkauf/10.jpg",
+   "assets/img/referenzen/solingen-verkauf/11.jpg",
+   "assets/img/referenzen/solingen-verkauf/12.jpg",
+   "assets/img/referenzen/solingen-verkauf/13.jpg",
+   "assets/img/referenzen/solingen-verkauf/14.jpg"
+  ],
+  "intro": "Ein Haus für jede Nutzungsidee: Familie, Mehrgenerationenwohnen oder Wohnen mit Praxis.",
+  "text": [
+   "Dieses Haus liegt am Ende einer Sackgasse in ruhiger Wohnlage und wurde 1984 in massiver Bauweise errichtet. Mit über 330 m² Wohn- und Nutzfläche eignet es sich als Einfamilienhaus, mit Privatpraxis, mit separater Einliegerwohnung oder als Mehrgenerationenhaus. Das Erdgeschoss mit offener Wohnküche und Wohnzimmer hat Zugang zur großen Terrasse mit Markisen und Whirlpool. Im Obergeschoss liegt eine renovierte Einheit mit Loggia, die aktuell als Praxis genutzt wird. Im Keller gibt es Hobbyraum, Waschküche mit Infrarot-Sauna und Ausgang in den Garten.",
+   "Besonders sind die Photovoltaikanlage mit Batteriespeicher und Notstromversorgung, die Ladestation für E-Autos, die Regenwasserzisterne und das nicht einsehbare Grundstück mit zwei Gartenhäuschen und Pergola. Garage und zwei Stellplätze gehören ebenfalls dazu."
+  ],
+  "fakten": [
+   {
+    "k": "Art",
+    "v": "Freistehendes Zweifamilienhaus"
+   },
+   {
+    "k": "Wohnfläche",
+    "v": "ca. 181 m²"
+   },
+   {
+    "k": "Nutzfläche",
+    "v": "ca. 151 m²"
+   },
+   {
+    "k": "Grundstück",
+    "v": "ca. 693 m²"
+   },
+   {
+    "k": "Zimmer",
+    "v": "6"
+   },
+   {
+    "k": "Baujahr",
+    "v": "1984"
+   },
+   {
+    "k": "Heizung",
+    "v": "Gasheizung (Brennwert 2020)"
+   },
+   {
+    "k": "Bäder",
+    "v": "2 Bäder, Gäste-WC"
+   },
+   {
+    "k": "Außenbereich",
+    "v": "Garten, 2 Terrassen, Loggia"
+   },
+   {
+    "k": "Extras",
+    "v": "Photovoltaik, Batteriespeicher, Sauna, Garage und 2 Stellplätze"
+   }
+  ]
  }
 ]
