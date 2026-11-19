@@ -344,3 +344,57 @@ html, body { overflow-x: clip; max-width: 100%; }
 .page-hero--foto > .wrap { z-index: 2; width: 100%; }
 .page-hero--foto::after { content: none; }
 .hero-bg { position: absolute; inset: 0; background-position: center 82%; background-size: cover; background-repeat: no-repeat; transform: scaleX(-1); z-index: 0; }
+
+/* Referenzen: Kacheln und Galerie-Fenster */
+.ref-karte { display: block; width: 100%; text-align: left; font: inherit; color: var(--anthrazit); background: none; border: 0; padding: 0; cursor: pointer; }
+.ref-karte .ref-bild { position: relative; display: block; aspect-ratio: 4 / 3; background: #ecebe6; overflow: hidden; }
+.ref-karte .ref-bild img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+.ref-karte:hover .ref-bild img, .ref-karte:focus-visible .ref-bild img { transform: scale(1.05); }
+.ref-karte:focus-visible { outline: 3px solid var(--gruen); outline-offset: 4px; }
+.ref-zahl { position: absolute; right: .8rem; bottom: .8rem; padding: .3rem .7rem; background: rgba(47,52,55,.82); color: #fff; font-size: .72rem; letter-spacing: .1em; }
+.ref-titel { display: block; margin-top: .9rem; font-family: var(--serif); font-size: 1.1rem; letter-spacing: .04em; }
+.ref-ort { display: block; margin-top: .15rem; font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: #5b7a12; }
+.ref-kurz { display: block; margin-top: .3rem; font-size: .92rem; color: #6a6a6a; }
+html.dlg-offen { overflow: hidden; }
+.ref-dlg { border: 0; padding: 0; width: min(1180px, 96vw); max-height: 94vh; background: #fff; color: var(--anthrazit); overflow: hidden; }
+.ref-dlg::backdrop { background: rgba(47,52,55,.82); }
+.dlg-x { position: absolute; top: .5rem; right: .7rem; z-index: 5; width: 2.6rem; height: 2.6rem; border: 0; background: var(--gruen); color: var(--anthrazit); font-size: 1.8rem; line-height: 1; cursor: pointer; }
+.dlg-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); max-height: 94vh; }
+.dlg-galerie { background: var(--anthrazit); display: flex; flex-direction: column; min-width: 0; }
+.dlg-bildbox { position: relative; flex: 1; min-height: 0; aspect-ratio: 4 / 3; background: #1f2326; display: grid; place-items: center; }
+.dlg-bild { width: 100%; height: 100%; object-fit: contain; display: block; }
+.dlg-pfeil { position: absolute; top: 50%; transform: translateY(-50%); width: 3rem; height: 3.4rem; border: 0; background: var(--gruen); color: var(--anthrazit); font-size: 2.2rem; line-height: 1; cursor: pointer; }
+.dlg-pfeil:hover { background: var(--gruen-dunkel); }
+.dlg-zurueck { left: 0; } .dlg-vor { right: 0; }
+.dlg-zaehler { position: absolute; left: .8rem; bottom: .8rem; padding: .3rem .7rem; background: rgba(47,52,55,.85); color: #fff; font-size: .8rem; letter-spacing: .1em; }
+.dlg-streifen { display: flex; gap: .4rem; overflow-x: auto; padding: .5rem; scrollbar-width: thin; }
+.dlg-thumb { flex: 0 0 5.2rem; height: 3.6rem; padding: 0; border: 2px solid transparent; background: none; cursor: pointer; opacity: .65; }
+.dlg-thumb.aktiv { border-color: var(--gruen); opacity: 1; }
+.dlg-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.dlg-info { padding: 2.2rem 1.8rem 2rem; overflow-y: auto; max-height: 94vh; }
+.dlg-info h2 { font-size: clamp(1.4rem, 2.2vw, 1.9rem); margin: .8rem 0 1rem; }
+.dlg-art { margin: 0; font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; display: flex; gap: .7rem; align-items: center; flex-wrap: wrap; }
+.dlg-art .objekt-badge { background: var(--gruen); color: var(--anthrazit); padding: .3rem .7rem; }
+.dlg-intro { font-weight: 500; }
+.dlg-fakten { margin: 1.6rem 0 0; border-top: 1px solid #e3e1db; }
+.dlg-fakten div { display: grid; grid-template-columns: 8.5rem 1fr; gap: 1rem; padding: .7rem 0; border-bottom: 1px solid #e3e1db; font-size: .93rem; }
+.dlg-fakten dt { color: #6a6a6a; } .dlg-fakten dd { margin: 0; }
+.dlg-cta { margin-top: 1.6rem; }
+@media (max-width: 860px) {
+  .ref-dlg { width: 100vw; max-height: 100vh; height: 100vh; max-width: 100vw; }
+  .dlg-grid { grid-template-columns: 1fr; max-height: none; height: 100%; overflow-y: auto; align-content: start; }
+  .dlg-bildbox { flex: none; }
+  .dlg-info { max-height: none; overflow: visible; padding: 1.6rem 1.2rem 2.4rem; }
+  .dlg-fakten div { grid-template-columns: 6.5rem 1fr; }
+}
+
+/* ===== Grün #AACD4D: Kopfbereiche, Band bei "Was wir für Sie tun", gefüllte Buttons ===== */
+:root { --gruen: #aacd4d; --gruen-dunkel: #98bb3a; }
+.page-hero:not(.page-hero--foto) { background-color: var(--gruen); color: var(--anthrazit); }
+.page-hero:not(.page-hero--foto) h1 { color: var(--anthrazit); }
+.page-hero:not(.page-hero--foto) .lead, .page-hero:not(.page-hero--foto) p { color: #2f3437; }
+.tiles-wrap, body.home main > section.tiles-wrap:not(#story) { background: linear-gradient(180deg, var(--gruen) 0, var(--gruen) 12rem, #fff 12rem); }
+.btn--ghost, .btn--light, .hero-video .btn--ghost, .hero-video .btn--light, .btn--outline { background: var(--gruen); border-color: var(--gruen); color: var(--anthrazit); }
+.btn--ghost:hover, .btn--light:hover, .hero-video .btn--ghost:hover, .hero-video .btn--light:hover, .btn--outline:hover { background: var(--gruen-dunkel); border-color: var(--gruen-dunkel); color: var(--anthrazit); }
+.btn--primary, .btn--gold, .site-header .btn--primary { background: var(--gruen); border-color: var(--gruen); }
+.btn--primary:hover, .btn--gold:hover, .site-header .btn--primary:hover { background: var(--gruen-dunkel); border-color: var(--gruen-dunkel); }

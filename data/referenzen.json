@@ -1,1 +1,260 @@
-[]
+[
+ {
+  "id": "kaiserswerth",
+  "art": "vermietet",
+  "titel": "Exklusive Maisonette mit Garten",
+  "ort": "Düsseldorf-Kaiserswerth",
+  "kurz": "3 Zimmer · ca. 107 m²",
+  "bild": "assets/img/referenzen/kaiserswerth/cover.jpg",
+  "bilder": [
+   "assets/img/referenzen/kaiserswerth/01.jpg",
+   "assets/img/referenzen/kaiserswerth/02.jpg",
+   "assets/img/referenzen/kaiserswerth/03.jpg",
+   "assets/img/referenzen/kaiserswerth/04.jpg",
+   "assets/img/referenzen/kaiserswerth/05.jpg",
+   "assets/img/referenzen/kaiserswerth/06.jpg",
+   "assets/img/referenzen/kaiserswerth/07.jpg",
+   "assets/img/referenzen/kaiserswerth/08.jpg",
+   "assets/img/referenzen/kaiserswerth/09.jpg",
+   "assets/img/referenzen/kaiserswerth/10.jpg",
+   "assets/img/referenzen/kaiserswerth/11.jpg",
+   "assets/img/referenzen/kaiserswerth/12.jpg",
+   "assets/img/referenzen/kaiserswerth/13.jpg",
+   "assets/img/referenzen/kaiserswerth/14.jpg",
+   "assets/img/referenzen/kaiserswerth/15.jpg",
+   "assets/img/referenzen/kaiserswerth/16.jpg",
+   "assets/img/referenzen/kaiserswerth/17.jpg",
+   "assets/img/referenzen/kaiserswerth/18.jpg",
+   "assets/img/referenzen/kaiserswerth/19.jpg",
+   "assets/img/referenzen/kaiserswerth/20.jpg",
+   "assets/img/referenzen/kaiserswerth/21.jpg",
+   "assets/img/referenzen/kaiserswerth/22.jpg",
+   "assets/img/referenzen/kaiserswerth/23.jpg",
+   "assets/img/referenzen/kaiserswerth/24.jpg",
+   "assets/img/referenzen/kaiserswerth/25.jpg",
+   "assets/img/referenzen/kaiserswerth/26.jpg"
+  ],
+  "intro": "Eleganz trifft Wohnkultur: Wohnen mit Stil, Komfort und eigenem Garten in einer der begehrten Wohnlagen Düsseldorfs.",
+  "text": [
+   "Diese Maisonette-Gartenwohnung in Düsseldorf-Kaiserswerth vereint auf rund 107 m² ein durchdachtes Raumkonzept mit hochwertiger Ausstattung und dem besonderen Wohngefühl eines eigenen Gartens. Sie liegt in einem gepflegten Zweifamilienhaus in unmittelbarer Nähe des Kalkumer Schlosses und erstreckt sich über zwei Ebenen. Die 2026 renovierte Wohnung eignet sich für Paare, anspruchsvolle Singles oder Menschen, die Wohnen und Arbeiten unter einem Dach verbinden möchten.",
+   "Die obere Wohnebene bietet einen großzügigen Wohnbereich mit bodentiefer Fensterfront, hellem Parkett und direktem Zugang zu Terrasse und Garten. Dazu kommen eine separate Küche mit Erker, hochwertiger Einbauküche und Kochinsel, ein flexibel nutzbares Zimmer und ein modernes Tageslicht-Duschbad. Im ruhigen Gartengeschoss liegen das Hauptschlafzimmer mit Gartenzugang und Bad en suite sowie ein Hauswirtschaftsraum.",
+   "Der Ortskern von Kaiserswerth mit Einkaufsmöglichkeiten, Cafés und gehobener Gastronomie, der Rhein und viele Grünflächen liegen in der Nähe. Die Düsseldorfer Innenstadt, der Flughafen und die Autobahnen sind schnell erreichbar."
+  ],
+  "fakten": [
+   {
+    "k": "Art",
+    "v": "Maisonettewohnung mit Garten"
+   },
+   {
+    "k": "Wohnfläche",
+    "v": "ca. 107 m²"
+   },
+   {
+    "k": "Zimmer",
+    "v": "3"
+   },
+   {
+    "k": "Baujahr",
+    "v": "1920, zuletzt renoviert 2026"
+   },
+   {
+    "k": "Etagen",
+    "v": "Erdgeschoss und Gartengeschoss"
+   },
+   {
+    "k": "Heizung",
+    "v": "Gasetagenheizung"
+   },
+   {
+    "k": "Bäder",
+    "v": "1× Duschbad mit Fenster, 1× Vollbad"
+   },
+   {
+    "k": "Außenbereich",
+    "v": "Terrasse und Garten"
+   }
+  ]
+ },
+ {
+  "id": "solingen",
+  "art": "vermietet",
+  "titel": "Zwei-Zimmer-Wohnung mit überdachter Terrasse",
+  "ort": "Solingen-Widdert",
+  "kurz": "2 Zimmer · ca. 83 m²",
+  "bild": "assets/img/referenzen/solingen/cover.jpg",
+  "bilder": [
+   "assets/img/referenzen/solingen/01.jpg",
+   "assets/img/referenzen/solingen/02.jpg",
+   "assets/img/referenzen/solingen/03.jpg",
+   "assets/img/referenzen/solingen/04.jpg",
+   "assets/img/referenzen/solingen/05.jpg",
+   "assets/img/referenzen/solingen/06.jpg",
+   "assets/img/referenzen/solingen/07.jpg",
+   "assets/img/referenzen/solingen/08.jpg",
+   "assets/img/referenzen/solingen/09.jpg",
+   "assets/img/referenzen/solingen/10.jpg",
+   "assets/img/referenzen/solingen/11.jpg",
+   "assets/img/referenzen/solingen/12.jpg",
+   "assets/img/referenzen/solingen/13.jpg",
+   "assets/img/referenzen/solingen/14.jpg"
+  ],
+  "intro": "Naturliebhaber aufgepasst: einziehen, umziehen und einfach wohlfühlen.",
+  "text": [
+   "Neuwertige Zwei-Zimmer-Wohnung im Gartengeschoss mit separatem Hauseingang und überdachter Terrasse im schönen Solingen-Widdert. Sie besticht durch ihre großzügige Aufteilung: Wohnbereich, Wohnküche mit Garderobe, ein geräumiges Schlafzimmer mit rund 26 m² und ein neuwertiges Tageslichtbad. Der gepflegte Zustand ermöglichte einen bequemen Einzug.",
+   "Widdert liegt auf den Anhöhen über der Wupper und ist von vielen Wander- und Spaziermöglichkeiten umgeben. Eine Bushaltestelle ist fußläufig erreichbar. Mit dem Auto sind Hilden, Langenfeld, Leichlingen und Leverkusen schnell erreicht. Düsseldorf liegt rund 20 km, Köln 30 km entfernt, die Autobahn A3 nur wenige Kilometer."
+  ],
+  "fakten": [
+   {
+    "k": "Art",
+    "v": "Wohnung mit separatem Hauseingang"
+   },
+   {
+    "k": "Wohnfläche",
+    "v": "ca. 82,9 m²"
+   },
+   {
+    "k": "Zimmer",
+    "v": "2"
+   },
+   {
+    "k": "Baujahr",
+    "v": "2010"
+   },
+   {
+    "k": "Etage",
+    "v": "Gartengeschoss"
+   },
+   {
+    "k": "Heizung",
+    "v": "Gaszentralheizung"
+   },
+   {
+    "k": "Bad",
+    "v": "Duschbad mit Tageslicht"
+   },
+   {
+    "k": "Außenbereich",
+    "v": "Überdachte Terrasse"
+   }
+  ]
+ },
+ {
+  "id": "stockum",
+  "art": "vermietet",
+  "titel": "Haus mit Appartementhaus",
+  "ort": "Düsseldorf-Stockum",
+  "kurz": "5 Zimmer · ca. 240 m² · 1.500 m² Grundstück",
+  "bild": "assets/img/referenzen/stockum/cover.jpg",
+  "bilder": [
+   "assets/img/referenzen/stockum/01.jpg",
+   "assets/img/referenzen/stockum/02.jpg",
+   "assets/img/referenzen/stockum/03.jpg",
+   "assets/img/referenzen/stockum/04.jpg",
+   "assets/img/referenzen/stockum/05.jpg",
+   "assets/img/referenzen/stockum/06.jpg",
+   "assets/img/referenzen/stockum/07.jpg",
+   "assets/img/referenzen/stockum/08.jpg",
+   "assets/img/referenzen/stockum/09.jpg",
+   "assets/img/referenzen/stockum/10.jpg",
+   "assets/img/referenzen/stockum/11.jpg",
+   "assets/img/referenzen/stockum/12.jpg",
+   "assets/img/referenzen/stockum/13.jpg",
+   "assets/img/referenzen/stockum/14.jpg",
+   "assets/img/referenzen/stockum/15.jpg",
+   "assets/img/referenzen/stockum/16.jpg",
+   "assets/img/referenzen/stockum/17.jpg",
+   "assets/img/referenzen/stockum/18.jpg"
+  ],
+  "intro": "Privatsphäre, Komfort und Design: ein Haus für höchste Ansprüche.",
+  "text": [
+   "In Düsseldorf-Stockum haben wir ein außergewöhnliches Anwesen vermietet: ein Haus mit rund 240 m² Wohnfläche und zusätzlichem Appartementhaus auf einem rund 1.500 m² großen Grundstück. Fünf Zimmer, mehrere Bäder, Küche, Garage und ein großzügiger Garten mit Gärtnerservice bieten viel Raum für Familie, Gäste und Rückzug."
+  ],
+  "fakten": [
+   {
+    "k": "Art",
+    "v": "Haus mit Appartementhaus"
+   },
+   {
+    "k": "Wohnfläche",
+    "v": "ca. 240 m²"
+   },
+   {
+    "k": "Nutzfläche",
+    "v": "ca. 70 m²"
+   },
+   {
+    "k": "Grundstück",
+    "v": "ca. 1.500 m²"
+   },
+   {
+    "k": "Zimmer",
+    "v": "5"
+   },
+   {
+    "k": "Etagen",
+    "v": "1,5"
+   },
+   {
+    "k": "Heizung",
+    "v": "Gaszentralheizung"
+   },
+   {
+    "k": "Bäder",
+    "v": "Wannenbad, offenes Vollbad mit separatem WC, Duschbad, Gäste-WC"
+   }
+  ]
+ },
+ {
+  "id": "wuppertal",
+  "art": "vermietet",
+  "titel": "Wohn- und Gewerbeeinheiten in zentraler Lage",
+  "ort": "Wuppertal",
+  "kurz": "2 Einheiten · 3 bis 6 Zimmer",
+  "bild": "assets/img/referenzen/wuppertal/cover.jpg",
+  "bilder": [
+   "assets/img/referenzen/wuppertal/01.jpg",
+   "assets/img/referenzen/wuppertal/02.jpg",
+   "assets/img/referenzen/wuppertal/03.jpg",
+   "assets/img/referenzen/wuppertal/04.jpg",
+   "assets/img/referenzen/wuppertal/05.jpg",
+   "assets/img/referenzen/wuppertal/06.jpg",
+   "assets/img/referenzen/wuppertal/07.jpg",
+   "assets/img/referenzen/wuppertal/08.jpg",
+   "assets/img/referenzen/wuppertal/09.jpg",
+   "assets/img/referenzen/wuppertal/10.jpg",
+   "assets/img/referenzen/wuppertal/11.jpg",
+   "assets/img/referenzen/wuppertal/12.jpg",
+   "assets/img/referenzen/wuppertal/13.jpg",
+   "assets/img/referenzen/wuppertal/14.jpg",
+   "assets/img/referenzen/wuppertal/15.jpg",
+   "assets/img/referenzen/wuppertal/16.jpg",
+   "assets/img/referenzen/wuppertal/17.jpg",
+   "assets/img/referenzen/wuppertal/18.jpg",
+   "assets/img/referenzen/wuppertal/19.jpg",
+   "assets/img/referenzen/wuppertal/20.jpg",
+   "assets/img/referenzen/wuppertal/21.jpg"
+  ],
+  "intro": "Zentral, flexibel, großzügig: repräsentative Einheiten in erstklassiger Stadtlage.",
+  "text": [
+   "In einem 1910 erbauten und ab 2009 kernsanierten Haus in Wuppertal haben wir gleich zwei Einheiten vermietet. Im II. Obergeschoss eine repräsentative Wohn- oder Gewerbeeinheit mit sechs Zimmern und rund 234 m², viel Raum für Ihre Visionen. Im III. Obergeschoss eine stilvolle und einladende 3-Zimmer-Wohnung mit Terrasse und Tageslichtbad."
+  ],
+  "fakten": [
+   {
+    "k": "Baujahr",
+    "v": "1910, kernsaniert ab 2009"
+   },
+   {
+    "k": "II. OG",
+    "v": "Wohn-/Gewerbeeinheit, 6 Zimmer, ca. 233,74 m², Terrasse, Wannenbad, Duschbad, Gäste-WC"
+   },
+   {
+    "k": "III. OG",
+    "v": "Etagenwohnung, 3 Zimmer, ca. 82,81 m², Terrasse, Wannenbad"
+   },
+   {
+    "k": "Heizung",
+    "v": "Gaszentralheizung"
+   }
+  ]
+ }
+]
