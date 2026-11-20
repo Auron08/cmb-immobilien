@@ -407,3 +407,9 @@ html.dlg-offen { overflow: hidden; }
 .dsh { max-width: 60rem; }
 .dsh-titel { font-size: 1.15rem; letter-spacing: .12em; margin: 0 0 .8rem; color: var(--anthrazit); }
 .dsh p { margin: 0 0 .8rem; color: #5f5c56; }
+
+/* Über uns: Überschrift groß, ein- bis zweizeilig, mit zwei Teamfotos */
+.unterschied-h2 { max-width: none; margin: 0 0 clamp(1.6rem, 3vw, 2.6rem); font-size: clamp(1.7rem, 4.6vw, 3.3rem); line-height: 1.15; text-wrap: balance; }
+.split-links .team-foto--gross { max-width: none; margin: 0; mix-blend-mode: normal; }
+.split-links .team-foto:not(.team-foto--gross) { max-width: 18rem; margin: 1.6rem 0 0; }
+@media (max-width: 900px) { .split-links .team-foto--gross { margin: 0; } .split-links .team-foto:not(.team-foto--gross) { margin: 1.4rem auto 0; } }
