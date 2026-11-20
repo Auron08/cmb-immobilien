@@ -416,3 +416,6 @@ html.dlg-offen { overflow: hidden; }
 
 /* Über uns: Überschrift in einer Zeile (Desktop/Tablet) */
 @media (min-width: 761px) { .unterschied-h2 { white-space: nowrap; font-size: clamp(1.4rem, 3.05vw, 2.75rem); text-wrap: nowrap; } }
+
+/* Über uns: Team-Bereich in transparentem Grün (#AACD4D) */
+section[aria-labelledby="team-titel"].section--paper { background-color: rgba(170, 205, 77, .22); }
