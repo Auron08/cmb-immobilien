@@ -413,3 +413,6 @@ html.dlg-offen { overflow: hidden; }
 .split-links .team-foto--gross { max-width: none; margin: 0; mix-blend-mode: normal; }
 .split-links .team-foto:not(.team-foto--gross) { max-width: 18rem; margin: 1.6rem 0 0; }
 @media (max-width: 900px) { .split-links .team-foto--gross { margin: 0; } .split-links .team-foto:not(.team-foto--gross) { margin: 1.4rem auto 0; } }
+
+/* Über uns: Überschrift in einer Zeile (Desktop/Tablet) */
+@media (min-width: 761px) { .unterschied-h2 { white-space: nowrap; font-size: clamp(1.4rem, 3.05vw, 2.75rem); text-wrap: nowrap; } }
