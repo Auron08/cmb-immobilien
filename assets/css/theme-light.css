@@ -253,7 +253,7 @@ html, body { overflow-x: clip; max-width: 100%; }
 /* Neue Teamfotos (runde Porträts mit grünem Rahmen) */
 .member-photo { aspect-ratio: 1 / 1; background: transparent; }
 .member-photo span { display: none; }
-.member-photo img, .member-photo img[src$="ilona.jpg"] { object-fit: contain; object-position: center; mix-blend-mode: multiply; }
+.member-photo img { object-fit: contain; object-position: center; mix-blend-mode: normal; }
 .team-teaser img { mix-blend-mode: multiply; }
 .team-foto { display: block; width: 100%; max-width: 30rem; height: auto; margin: 2rem 0 0; mix-blend-mode: multiply; }
 .split-links h2 { margin: 0; }
