@@ -457,3 +457,9 @@ section[aria-labelledby="team-titel"].section--paper { background-color: rgba(17
   .page-hero--bild { min-height: 15rem; padding-block: 2.6rem; }
   .hero-bild { width: 100%; opacity: .18; -webkit-mask-image: none; mask-image: none; }
 }
+
+/* Foto-Köpfe: grüner Hintergrund statt Anthrazit */
+.page-hero.page-hero--bild { background-color: var(--gruen); color: var(--anthrazit); }
+.page-hero--bild h1 { color: var(--anthrazit); }
+.page-hero--bild .lead, .page-hero--bild p { color: var(--anthrazit); }
+@media (max-width: 760px) { .hero-bild { opacity: .2; } }
