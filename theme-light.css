@@ -83,7 +83,7 @@ input, select, textarea { background: #fff; color: #2f3437; border-color: #cfcdc
 .searchbar .sb-search { position: relative; flex: 1 1 auto; display: flex; align-items: center; gap: .8rem; min-width: 0; }
 .searchbar .sb-search svg { width: 1rem; height: 1rem; flex: none; stroke: #2f3437; fill: none; stroke-width: 2.2; stroke-linecap: round; }
 .searchbar input[type=search] { border: 0; background: transparent; color: #2f3437; padding: .75rem 0; font-size: .9rem; border-radius: 0; flex: 1; min-width: 0; }
-.searchbar input[type=search]::placeholder { color: #85827b; }
+.searchbar input[type=search]::placeholder { color: #66635d; }
 .searchbar input:focus-visible { outline: none; }
 .tabs { gap: 0; }
 .tabs button { border: 0; border-bottom: 2px solid transparent; background: transparent; color: #55524d; padding: .7rem .9rem; font-size: .68rem; letter-spacing: .2em; border-radius: 0; }
@@ -122,12 +122,12 @@ body.home main > section.section--paper:not(#story) { background-color: var(--pa
 .objekt-badge { background: #2f3437; color: #fff; }
 .objekt-badge--art { background: rgba(255,255,255,.92); color: #2f3437; }
 .objekt-preis { color: #2f3437; font-family: var(--serif); letter-spacing: .03em; }
-.objekt-preis s { color: #8d8a83; }
+.objekt-preis s { color: #66635d; }
 .objekt-titel { color: #2f3437; font-family: var(--serif); text-transform: none; letter-spacing: .03em; font-weight: 400; }
 .objekt-ort { color: #6a6a6a; }
 .objekt-meta { color: #55524d; border-top-color: #ecebe7; }
 .objekte-leer, .objekte-fehler { color: #55524d; }
-.objekte-hinweis { color: #85827b; }
+.objekte-hinweis { color: #66635d; }
 .team-teaser img { filter: none; }
 
 /* Video-Bänder: leichterer Schleier */
@@ -148,7 +148,7 @@ body.home main > section.section--paper:not(#story) { background-color: var(--pa
 /* Anfrageformular hell */
 .anfrage { background: #fff; border: 1px solid #e6e4df; border-top: 3px solid var(--accent); }
 .anfrage h2 { font-size: 1.5rem; }
-.progress li { color: #9a978f; }
+.progress li { color: #6b6862; }
 .progress li::before { background: #e6e4df; }
 .progress li.on { color: #2f3437; }
 .progress li.done { color: var(--gold-text); }
@@ -165,7 +165,7 @@ body.home main > section.section--paper:not(#story) { background-color: var(--pa
 .grp-title { color: var(--gold-text); }
 .q { color: #55524d; }
 .f input, .f textarea { background: #fff; border-color: #cfcdc7; color: #2f3437; border-radius: 0; }
-.f label { color: #85827b; }
+.f label { color: #66635d; }
 .f input:focus + label, .f input:not(:placeholder-shown) + label, .f textarea:focus + label, .f textarea:not(:placeholder-shown) + label { color: var(--gold-text); }
 .f input:focus, .f textarea:focus { border-color: #2f3437; box-shadow: 0 0 0 3px rgba(168,205,78,.35); }
 .f.bad input, .f.bad textarea { border-color: #c0392b; }
@@ -197,7 +197,7 @@ body.home main > section.tiles-wrap:not(#story) { background: linear-gradient(18
 .searchbar .sb-liste { position: absolute; left: 0; right: 0; top: 100%; z-index: 70; margin: .3rem 0 0; padding: .3rem 0; list-style: none; background: #fff; border: 1px solid #e0ded8; box-shadow: 0 14px 30px rgba(47,52,55,.12); }
 .searchbar .sb-liste[hidden] { display: none; }
 .searchbar .sb-liste li { display: flex; justify-content: space-between; gap: 1rem; padding: .75rem 1.1rem; cursor: pointer; font-size: .95rem; color: #2f3437; }
-.searchbar .sb-liste li small { color: #85827b; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; align-self: center; }
+.searchbar .sb-liste li small { color: #66635d; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; align-self: center; }
 .searchbar .sb-liste li:hover, .searchbar .sb-liste li[aria-selected=true] { background: #f4f3ef; }
 .page-hero--slim { min-height: 0; padding-block: 3.2rem 2.6rem; }
 .page-hero--slim h1 { font-size: clamp(1.8rem, 4.2vw, 3rem); }
@@ -211,7 +211,7 @@ details.member > summary:focus-visible { outline: 2px solid #8dc63f; outline-off
 details.member[open] .member-more { opacity: .5; }
 .member-contact { list-style: none; margin: 1rem 0 0; padding: 1rem 0 0; border-top: 1px solid #e0ded8; display: grid; gap: .6rem; }
 .member-contact li { display: grid; gap: .1rem; }
-.member-contact span { font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: #85827b; }
+.member-contact span { font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: #66635d; }
 .member-contact a { color: #2f3437; font-weight: 500; text-decoration: none; word-break: break-word; }
 .member-contact a:hover { text-decoration: underline; }
 .member-note { margin: 1rem 0 0; padding-top: 1rem; border-top: 1px solid #e0ded8; font-style: italic; color: #2f3437; }
@@ -253,7 +253,7 @@ html, body { overflow-x: clip; max-width: 100%; }
 /* Neue Teamfotos (runde Porträts mit grünem Rahmen) */
 .member-photo { aspect-ratio: 1 / 1; background: transparent; }
 .member-photo span { display: none; }
-.member-photo img, .member-photo img[src$="ilona.jpg"] { object-fit: contain; object-position: center; mix-blend-mode: multiply; }
+.member-photo img { object-fit: contain; object-position: center; mix-blend-mode: normal; }
 .team-teaser img { mix-blend-mode: multiply; }
 .team-foto { display: block; width: 100%; max-width: 30rem; height: auto; margin: 2rem 0 0; mix-blend-mode: multiply; }
 .split-links h2 { margin: 0; }
@@ -419,3 +419,11 @@ html.dlg-offen { overflow: hidden; }
 
 /* Über uns: Team-Bereich in transparentem Grün (#AACD4D) */
 section[aria-labelledby="team-titel"].section--paper { background-color: rgba(170, 205, 77, .22); }
+
+/* Rechtliches: Energie-/Provisionszeile in Objektkarten, sichtbarer Fokus in Formularen */
+.objekt-energie { margin: .35rem 0 0; font-size: .8rem; line-height: 1.4; color: #3d4144; }
+.f input:focus-visible, .f textarea:focus-visible, .f select:focus-visible,
+.consent2 input:focus-visible, .btn:focus-visible, .searchbar button:focus-visible { outline: 3px solid #2f3437; outline-offset: 2px; }
+.f input:focus, .f textarea:focus { outline: 2px solid #2f3437; outline-offset: 1px; }
+.quotes-hinweis { margin: 1.4rem 0 0; font-size: .8rem; color: #55524d; }
+.quote-side .stars { display: block; margin-bottom: .3rem; }
