@@ -27,7 +27,7 @@
     var ort = [o.adresse, [o.plz, o.ort].join(" ") + (o.stadtteil ? ", " + o.stadtteil : "")].filter(Boolean).join(" · ");
     return '<a class="objekt" href="' + esc(o.immoweltUrl) + '" target="_blank" rel="noopener">' +
       '<div class="objekt-bild"><span class="platz">CMB Immobilien</span>' +
-      '<img src="' + esc(o.bild) + '" alt="' + esc(o.titel + ", " + o.ort) + '" loading="lazy" referrerpolicy="no-referrer">' +
+      '<img src="' + esc(o.bild) + '" alt="' + esc(o.titel + ", " + o.ort) + '" loading="lazy" referrerpolicy="no-referrer"' + (o.bildQuelle ? ' data-fallback="' + esc(o.bildQuelle) + '"' : "") + '>' +
       (o.status ? '<span class="objekt-badge">' + esc(o.status) + "</span>" : "") +
       '<span class="objekt-badge objekt-badge--art">' + (o.vermarktung === "miete" ? "Miete" : "Kauf") + "</span></div>" +
       '<div class="objekt-text"><div class="objekt-preis">' + preis + "</div>" +
@@ -174,8 +174,34 @@
   addEventListener("scroll", solid, { passive: true }); solid();
 })();
 
-/* Fehlt die lokale Bilddatei, wird das Bild entfernt und der Platzhalter bleibt sichtbar. Es werden bewusst keine Bilder von Drittservern nachgeladen (Datenschutz). */
-document.addEventListener("error", function (e) {
-  var img = e.target;
-  if (img && img.tagName === "IMG" && img.closest && img.closest(".objekt-bild")) { img.remove(); }
-}, true);
+/* Fehlt die lokale Bilddatei, wird das Bild ausgeblendet und der Platzhalter bleibt sichtbar.
+ * Bilder von immowelt werden NUR nach ausdrücklicher Zustimmung per Klick geladen (Datenschutz: IP-Übermittlung an immowelt). */
+(function () {
+  var erlaubt = false;
+  var hinweis = function () { return document.getElementById("bilder-hinweis"); };
+  function laden(img) {
+    var fb = img.getAttribute("data-fallback");
+    if (fb) { img.removeAttribute("data-fallback"); img.removeAttribute("data-fehlt"); img.src = fb; }
+  }
+  document.addEventListener("error", function (e) {
+    var img = e.target;
+    if (!img || img.tagName !== "IMG" || !img.closest || !img.closest(".objekt-bild")) { return; }
+    if (img.getAttribute("data-fallback")) {
+      if (erlaubt) { laden(img); return; }
+      img.setAttribute("data-fehlt", "1");
+      var h = hinweis(); if (h) { h.hidden = false; }
+    } else { img.remove(); }
+  }, true);
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest("#bilder-laden");
+    if (!b) { return; }
+    erlaubt = true;
+    var h = hinweis(); if (h) { h.hidden = true; }
+    [].forEach.call(document.querySelectorAll(".objekt-bild img[data-fehlt]"), laden);
+  });
+  // Nach dem Filtern neu gezeichnete Karten: Zustimmung gilt weiter, solange die Seite offen ist.
+  new MutationObserver(function () {
+    if (!erlaubt) { return; }
+    [].forEach.call(document.querySelectorAll(".objekt-bild img[data-fallback]"), function (i) { if (i.complete && i.naturalWidth === 0) { laden(i); } });
+  }).observe(document.body, { childList: true, subtree: true });
+})();
