@@ -27,13 +27,32 @@
     var ort = [o.adresse, [o.plz, o.ort].join(" ") + (o.stadtteil ? ", " + o.stadtteil : "")].filter(Boolean).join(" · ");
     return '<a class="objekt" href="' + esc(o.immoweltUrl) + '" target="_blank" rel="noopener">' +
       '<div class="objekt-bild"><span class="platz">CMB Immobilien</span>' +
-      '<img src="' + esc(o.bild) + '" data-fallback="' + esc(o.bildQuelle || "") + '" alt="' + esc(o.titel + ", " + o.ort) + '" loading="lazy" referrerpolicy="no-referrer">' +
+      '<img src="' + esc(o.bild) + '" alt="' + esc(o.titel + ", " + o.ort) + '" loading="lazy" referrerpolicy="no-referrer">' +
       (o.status ? '<span class="objekt-badge">' + esc(o.status) + "</span>" : "") +
       '<span class="objekt-badge objekt-badge--art">' + (o.vermarktung === "miete" ? "Miete" : "Kauf") + "</span></div>" +
       '<div class="objekt-text"><div class="objekt-preis">' + preis + "</div>" +
       '<h3 class="objekt-titel">' + esc(o.titel) + (o.zusatz ? " – " + esc(o.zusatz) : "") + "</h3>" +
       '<p class="objekt-ort">' + esc(ort) + "</p>" +
-      '<p class="objekt-meta">' + (meta.join(" · ") || "Details bei Immowelt") + "</p></div></a>";
+      '<p class="objekt-meta">' + (meta.join(" · ") || "Details bei Immowelt") + "</p>" +
+      energieZeile(o) + provisionZeile(o) + "</div></a>";
+  }
+
+  /* Pflichtangaben in Immobilienanzeigen (§ 87 GEG): nur Werte aus data/objekte.json, nichts wird erfunden. */
+  function energieZeile(o) {
+    var t = [];
+    if (o.energieArt) { t.push(esc(o.energieArt)); }
+    if (o.energieWert != null && o.energieWert !== "") { t.push(zahl(o.energieWert) + " kWh/(m²·a)"); }
+    if (o.energietraeger) { t.push(esc(o.energietraeger)); }
+    if (o.baujahr) { t.push("Baujahr " + esc(o.baujahr)); }
+    if (o.energieKlasse) { t.push("Klasse " + esc(o.energieKlasse)); }
+    if (o.energieHinweis) { return '<p class="objekt-energie">Energieausweis: ' + esc(o.energieHinweis) + "</p>"; }
+    if (t.length) { return '<p class="objekt-energie">Energieausweis: ' + t.join(" · ") + "</p>"; }
+    if (window.console) { console.warn("Energieangaben fehlen für Objekt " + o.id); }
+    return '<p class="objekt-energie">Energieangaben: siehe Exposé</p>';
+  }
+  function provisionZeile(o) {
+    if (o.provision) { return '<p class="objekt-energie">' + (o.vermarktung === "miete" ? "Provision: " : "Käuferprovision: ") + esc(o.provision) + "</p>"; }
+    return "";
   }
 
   function setTabs() {
@@ -155,11 +174,8 @@
   addEventListener("scroll", solid, { passive: true }); solid();
 })();
 
-/* Bild-Fallback: fehlt die lokale Datei, wird das Immowelt-Bild geladen, sonst bleibt der Platzhalter. */
+/* Fehlt die lokale Bilddatei, wird das Bild entfernt und der Platzhalter bleibt sichtbar. Es werden bewusst keine Bilder von Drittservern nachgeladen (Datenschutz). */
 document.addEventListener("error", function (e) {
   var img = e.target;
-  if (!img || img.tagName !== "IMG" || !img.hasAttribute("data-fallback")) { return; }
-  var fb = img.getAttribute("data-fallback");
-  img.removeAttribute("data-fallback");
-  if (fb) { img.src = fb; } else { img.remove(); }
+  if (img && img.tagName === "IMG" && img.closest && img.closest(".objekt-bild")) { img.remove(); }
 }, true);
