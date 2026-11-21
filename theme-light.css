@@ -427,3 +427,15 @@ section[aria-labelledby="team-titel"].section--paper { background-color: rgba(17
 .f input:focus, .f textarea:focus { outline: 2px solid #2f3437; outline-offset: 1px; }
 .quotes-hinweis { margin: 1.4rem 0 0; font-size: .8rem; color: #55524d; }
 .quote-side .stars { display: block; margin-bottom: .3rem; }
+
+/* 3D-Haus im Garten: heller Hintergrund, deshalb Textfelder mit dunklem Grund für gute Lesbarkeit */
+#welt { background: linear-gradient(#5fa9f2, #cfe8ff 54%, #6fae4a 55%); }
+@media (min-width: 761px) {
+  #story .beat-inner { background: rgba(36, 42, 45, .72); padding: 1.9rem 2.1rem; border-radius: 6px; -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); }
+  #story .beat .lead, #story .beat .lead--em { color: #f1efea; text-shadow: none; }
+}
+#etagen li { background: rgba(36, 42, 45, .78); padding: .65rem .85rem; border-radius: 4px; }
+#etagen span { color: #f1efea; }
+#leader line { stroke: #fff; stroke-width: 1.5; filter: drop-shadow(0 0 2px rgba(0,0,0,.6)); }
+#etagen li { padding: .45rem .75rem; }
+#etagen span { font-size: .86rem; line-height: 1.35; }
