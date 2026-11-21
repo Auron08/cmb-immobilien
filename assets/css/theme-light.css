@@ -446,3 +446,14 @@ section[aria-labelledby="team-titel"].section--paper { background-color: rgba(17
 .bilder-hinweis p { margin: 0 0 .8rem; font-size: .9rem; line-height: 1.5; color: #2f3437; }
 .bilder-hinweis a { color: #2f3437; text-decoration: underline; }
 .objekt-bild img[data-fehlt] { visibility: hidden; }
+
+/* Seitenköpfe mit Foto (Leistungen, Social Media, Referenzen, Kontakt): Foto rechts, weich in den Hintergrund übergehend */
+.page-hero--bild { min-height: 19rem; padding-block: 3.2rem; }
+.page-hero--bild::before { background: none; }
+.page-hero--bild > .wrap { position: relative; z-index: 2; }
+.hero-bild { position: absolute; top: 0; right: 0; bottom: 0; width: min(46vw, 32rem); background-size: cover; background-repeat: no-repeat; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 42%); mask-image: linear-gradient(90deg, transparent 0, #000 42%); z-index: 0; }
+.page-hero--bild h1 { max-width: 16ch; }
+@media (max-width: 760px) {
+  .page-hero--bild { min-height: 15rem; padding-block: 2.6rem; }
+  .hero-bild { width: 100%; opacity: .18; -webkit-mask-image: none; mask-image: none; }
+}
