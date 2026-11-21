@@ -44,6 +44,9 @@ def abbilden(c, art, alt):
     o = {"id": legacy, "vermarktung": art, "titel": hf.get("title") or ("Angebot zum Kauf" if art == "kauf" else "Angebot zur Miete")}
     if alt.get("zusatz"):
         o["zusatz"] = alt["zusatz"]                      # von Hand ergänzte Zusätze bleiben erhalten
+    for k in ("energieArt", "energieWert", "energietraeger", "baujahr", "energieKlasse", "energieHinweis", "provision"):
+        if alt.get(k) not in (None, ""):
+            o[k] = alt[k]                                # Pflichtangaben (GEG, Provision) bleiben erhalten
     if (c.get("tags") or {}).get("isNew"):
         o["status"] = "Neu"
     wert = zahl(preis.get("value"))

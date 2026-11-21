@@ -7,8 +7,9 @@ from openpyxl import load_workbook
 HIER = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HIER)
 SPALTEN = ["id","vermarktung","titel","zusatz","status","preis","preisAlt","preisart","zimmer","wohnflaeche",
-           "grundstueck","gewerbeflaeche","geschoss","verfuegbar","adresse","stadtteil","plz","ort","immoweltUrl"]
-ZAHLEN = {"preis","preisAlt","zimmer","wohnflaeche","grundstueck"}
+           "grundstueck","gewerbeflaeche","geschoss","verfuegbar","adresse","stadtteil","plz","ort","immoweltUrl",
+           "energieArt","energieWert","energietraeger","baujahr","energieKlasse","energieHinweis","provision"]
+ZAHLEN = {"preis","preisAlt","zimmer","wohnflaeche","grundstueck","energieWert"}
 
 ws = load_workbook(os.path.join(ROOT, "objekte.xlsx"), data_only=True)["Objekte"]
 kopf = [str(c.value).strip() if c.value else "" for c in ws[1]]
