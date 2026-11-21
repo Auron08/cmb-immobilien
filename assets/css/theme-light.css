@@ -439,3 +439,10 @@ section[aria-labelledby="team-titel"].section--paper { background-color: rgba(17
 #leader line { stroke: #fff; stroke-width: 1.5; filter: drop-shadow(0 0 2px rgba(0,0,0,.6)); }
 #etagen li { padding: .45rem .75rem; }
 #etagen span { font-size: .86rem; line-height: 1.35; }
+
+/* Angebote: Zustimmung zum Laden der Bilder von immowelt */
+.bilder-hinweis { margin: 0 0 1.4rem; padding: 1rem 1.2rem; border: 1px solid #d9d6cf; border-left: 4px solid #aacd4d; background: #f5f4f1; border-radius: 4px; }
+.bilder-hinweis[hidden] { display: none; }
+.bilder-hinweis p { margin: 0 0 .8rem; font-size: .9rem; line-height: 1.5; color: #2f3437; }
+.bilder-hinweis a { color: #2f3437; text-decoration: underline; }
+.objekt-bild img[data-fehlt] { visibility: hidden; }
