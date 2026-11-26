@@ -1,5 +1,5 @@
 {
-  "stand": "2026-11-16",
+  "stand": "2026-11-26",
   "quelle": "https://www.immowelt.de/profil/c4f2d0039cef4754a39873e509d7870f",
   "hinweis": "Startdaten vom öffentlichen Immowelt-Profil von CMB Immobilien, Stand 16.11.2026. Vor Veröffentlichung vom Kunden bestätigen lassen. Die Bilder werden mit bilder-holen.sh bzw. bilder-holen.ps1 nach assets/img/objekte/ geladen (Original: bildQuelle). Jedes Objekt verlinkt auf seine eigene Immowelt-Objektseite.",
   "objekte": [
@@ -112,6 +112,25 @@
       "bild": "assets/img/objekte/bd00e23b-0c68-4db7-ae4a-7ab8d997e37b.jpg",
       "immoweltUrl": "https://www.immowelt.de/expose/bd00e23b-0c68-4db7-ae4a-7ab8d997e37b",
       "bildQuelle": "https://mms.immowelt.de/0/5/e/8/05e82aa3-ffd9-4e5c-acff-06be795d57fd.jpg"
+    },
+    {
+      "id": "a2a7b095-c50c-434e-958f-80f7a893a0e5",
+      "vermarktung": "miete",
+      "titel": "Maisonette zur Miete",
+      "status": "Neu",
+      "preis": 1200,
+      "preisart": "Kaltmiete",
+      "zimmer": 2.5,
+      "wohnflaeche": 86,
+      "geschoss": "2/3",
+      "verfuegbar": "frei ab sofort",
+      "adresse": "Merowingerstraße 19",
+      "stadtteil": "Bilk",
+      "plz": "40223",
+      "ort": "Düsseldorf",
+      "bild": "assets/img/objekte/a2a7b095-c50c-434e-958f-80f7a893a0e5.jpg",
+      "immoweltUrl": "https://www.immowelt.de/expose/a2a7b095-c50c-434e-958f-80f7a893a0e5",
+      "bildQuelle": "https://mms.immowelt.de/d/f/9/b/df9b8ba6-208d-4f3e-b5e3-f3c8d6304f21.jpg"
     },
     {
       "id": "cbfa95fa-4f32-43af-bca0-4187faeb4c38",
