@@ -87,7 +87,7 @@ function build() {
 
   // 1 Sockel (Verwaltung)
   {
-    const g = addLayer('sockel', 1.1, [0, 2.9, 0], 0.1, [0, 0.3, 0]);
+    const g = addLayer('sockel', 1.1, [0, 3.8, 0], 0.1, [0, 0.3, 0]);
     g.add(mesh(bevBox(11.2, 0.6, 8.2, 0.05), M.plinth, 0, 0.3, 0));
     g.add(mesh(bevBox(2.6, 0.22, 1.3, 0.04), M.plinth, 0, 0.11, 4.7));
   }
@@ -108,9 +108,9 @@ function build() {
     g.add(mesh(bevBox(9.7, 0.2, 6.7), M.wall, 0, 2.9, 0));
   }
 
-  // 2 Obergeschoss (Verkauf und Kauf)
-  {
-    const g = addLayer('og', 4.7, [0, 7.9, 0], 0.6, [0, 1.4, 0]);
+  // 2 und 3 Obergeschosse (Verkauf, Kauf)
+  [['og', 4.7, 7.9, 0.55, true], ['og2', 7.5, 10.2, 0.78, false]].forEach(([nm, baseY, lift, ord, balkon]) => {
+    const g = addLayer(nm, baseY, [0, lift, 0], ord, [0, 1.4, 0]);
     const win = [-3, 0, 3].map((x) => ({ x, y: 0.1, w: 1.5, h: 1.4 }));
     g.add(mesh(panel(10, 2.8, 0.3, win), M.wall, 0, 1.4, 3.5));
     g.add(mesh(panel(10, 2.8, 0.3, win), M.wall, 0, 1.4, -3.5));
@@ -121,17 +121,19 @@ function build() {
     [-1, 1].forEach((s) => g.add(mesh(bevBox(0.3, 2.8, 6.7), M.wall, s * 4.85, 1.4, 0)));
     g.add(mesh(bevBox(9.7, 0.2, 6.7), M.wall, 0, 2.7, 0));
     // Balkon mit Geländer
+    if (balkon) {
     g.add(mesh(bevBox(3.4, 0.14, 1.2, 0.03), M.plinth, 0, 0.1, 4.1));
     const rail = new THREE.BoxGeometry(3.4, 0.04, 0.04);
     g.add(mesh(rail, M.steel, 0, 0.95, 4.65));
     for (let x = -1.6; x <= 1.61; x += 0.4) g.add(mesh(new THREE.BoxGeometry(0.04, 0.85, 0.04), M.steel, x, 0.55, 4.65));
     [-1.7, 1.7].forEach((x) => g.add(mesh(new THREE.BoxGeometry(0.04, 0.04, 1.1), M.steel, x, 0.95, 4.1)));
-  }
+    }
+  });
 
   // 3 Dach mit Giebel und Herz (Bewertung)
   let heart;
   {
-    const g = addLayer('dach', 7.5, [0, 10.6, 0], 1.0, [0, 1.6, 0]);
+    const g = addLayer('dach', 10.3, [0, 12.6, 0], 1.0, [0, 1.6, 0]);
     const a = Math.atan2(3.3, 5.6);
     const len = Math.hypot(5.6, 3.3);
     [-1, 1].forEach((s) => {
@@ -344,7 +346,7 @@ function start() {
 
   // Herzlicht
   const heartLight = new THREE.PointLight(0x7ad21e, 2.5, 10, 2);
-  heartLight.position.set(0, 8.75, 5.2);
+  heartLight.position.set(0, 11.5, 5.2);
   scene.add(heartLight);
 
   // Postprocessing
@@ -370,11 +372,11 @@ function start() {
 
   /* ---------- Kamera-Cues, an Abschnitte gebunden ---------- */
   const CUES = [
-    { id: 'beat-hero', frame: 16.5, az: 26, el: -1, t: [0, 6.2, 0], off: 0.2, e: 0, ts: 1 },
-    { id: 'beat-close', frame: 3.8, az: 6, el: 5, t: [0, 8.8, 3.5], off: 0.3, e: 0, ts: 0.22 },
-    { id: 'beat-apart', frame: 37, az: -22, el: 7, t: [0, 12.0, 0], off: 0.1, e: 1, ts: 1 },
-    { id: 'beat-around', frame: 37, az: 150, el: 12, t: [0, 12.0, 0], off: 0.1, e: 1, ts: 1 },
-    { id: 'beat-outro', frame: 17.5, az: 330, el: 0, t: [0, 6.0, 0], off: -0.2, e: 0, ts: 1 },
+    { id: 'beat-hero', frame: 17.5, az: 26, el: -1, t: [0, 7.4, 0], off: 0.2, e: 0, ts: 1 },
+    { id: 'beat-close', frame: 3.8, az: 6, el: 5, t: [0, 11.6, 3.5], off: 0.3, e: 0, ts: 0.22 },
+    { id: 'beat-apart', frame: 43, az: -22, el: 7, t: [0, 13.6, 0], off: 0.1, e: 1, ts: 1 },
+    { id: 'beat-around', frame: 43, az: 150, el: 12, t: [0, 13.6, 0], off: 0.1, e: 1, ts: 1 },
+    { id: 'beat-outro', frame: 18.5, az: 330, el: 0, t: [0, 7.2, 0], off: -0.2, e: 0, ts: 1 },
   ];
   const KEYS = ['frame', 'az', 'el', 'off', 'e', 'ts', 'tx', 'ty', 'tz'];
   CUES.forEach((c) => { [c.tx, c.ty, c.tz] = c.t; });
@@ -479,7 +481,7 @@ function start() {
     heart.material.emissiveIntensity = 0.7 + 0.9 * s;
     heart.scale.setScalar(1 + 0.07 * s);
     heartLight.intensity = 2.5 + 6 * s;
-    heartLight.position.set(0, layers[4].group.position.y + heart.position.y, heart.position.z + 1.8);
+    heartLight.position.set(0, layers[5].group.position.y + heart.position.y, heart.position.z + 1.8);
 
     placeCamera(cur);
     world.sky.rotation.y = rad(cur.az); world.lights.rotation.y = rad(cur.az);
