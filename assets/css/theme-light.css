@@ -487,3 +487,6 @@ p.lead + p.lead, .section-head p + p, .hv-lead + .hv-lead, .cta p + p { margin-t
 @media (max-width: 900px) { .tile--collage .tile-label { font-size: .8rem; letter-spacing: .06em; } }
 @media (max-width: 900px) { .tile--collage { grid-column: span 2; aspect-ratio: 4/3.2; } .tile--collage .tile-label { font-size: .9rem; letter-spacing: .1em; } }
 @media (max-width: 900px) { .tiles { grid-auto-flow: dense; } }
+.vk-youtube { background: linear-gradient(160deg, #98bb3a, #2f3437 85%); }
+@media (min-width: 901px) { .section-head > h2 { grid-column: 1; grid-row: 1 / span 2; } .section-head > p { grid-column: 2; } .section-head > p + p { margin-top: .6rem; } }
+@media (min-width: 901px) { .section-head > h2 + p { align-self: end; } .section-head > p + p { align-self: start; } }
