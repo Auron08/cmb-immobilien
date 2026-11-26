@@ -429,7 +429,7 @@ section[aria-labelledby="team-titel"].section--paper { background-color: rgba(17
 .quote-side .stars { display: block; margin-bottom: .3rem; }
 
 /* 3D-Haus im Garten: heller Hintergrund, deshalb Textfelder mit dunklem Grund für gute Lesbarkeit */
-#welt { background: linear-gradient(#5fa9f2, #cfe8ff 54%, #6fae4a 55%); }
+#welt { background: linear-gradient(#3d9be9, #cfe8ff 54%, #aacd4d 55%); }
 @media (min-width: 761px) {
   #story .beat-inner { background: rgba(36, 42, 45, .72); padding: 1.9rem 2.1rem; border-radius: 6px; -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); }
   #story .beat .lead, #story .beat .lead--em { color: #f1efea; text-shadow: none; }
@@ -463,3 +463,15 @@ section[aria-labelledby="team-titel"].section--paper { background-color: rgba(17
 .page-hero--bild h1 { color: var(--anthrazit); }
 .page-hero--bild .lead, .page-hero--bild p { color: var(--anthrazit); }
 @media (max-width: 760px) { .hero-bild { opacity: .2; } }
+
+/* Foto-Köpfe: Varianten (Waage, rundes Bild, Absatzabstände) */
+.hero-bild--objekt { width: min(34vw, 24rem); background-size: contain; background-position: right 6% center; -webkit-mask-image: none; mask-image: none; top: 1rem; bottom: 1rem; right: clamp(1rem, 6vw, 6rem); }
+.hero-rund { position: absolute; top: 50%; right: clamp(1rem, 7vw, 7rem); width: clamp(11rem, 24vw, 17rem); aspect-ratio: 1; transform: translateY(-50%); background-size: contain; background-repeat: no-repeat; background-position: center; z-index: 0; }
+.page-hero--bild { min-height: 20rem; }
+.page-hero--bild > .wrap > p + p { margin-top: .9rem; }
+p.lead + p.lead, .section-head p + p, .hv-lead + .hv-lead, .cta p + p { margin-top: .9rem; }
+.beat-inner p.lead + p.lead { margin-top: 1rem; }
+@media (max-width: 760px) {
+  .hero-bild--objekt { width: 100%; right: 0; opacity: .22; background-position: right center; }
+  .hero-rund { width: 13rem; right: -2.5rem; top: 50%; bottom: auto; transform: translateY(-50%); opacity: .22; }
+}

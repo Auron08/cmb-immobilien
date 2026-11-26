@@ -169,7 +169,7 @@ function skyTexture(stops) {
   t.colorSpace = THREE.SRGBColorSpace;
   return t;
 }
-const SKY_STOPS = [[0, '#1766dc'], [0.22, '#2a7fe6'], [0.36, '#3f95ec'], [0.44, '#6fb5f6'], [0.485, '#a9d8fd'], [0.5, '#dff0ff'], [0.51, '#7fb55a'], [1, '#5a9a3a']];
+const SKY_STOPS = [[0, '#2f8fe6'], [0.22, '#4aa3ee'], [0.36, '#69b6f3'], [0.44, '#8fcaf8'], [0.485, '#b9e0fd'], [0.5, '#dff0ff'], [0.51, '#aacd4d'], [1, '#98bb3a']];
 
 function dayEnv(renderer) {
   const env = new THREE.Scene();
@@ -212,14 +212,14 @@ function makeWorld(scene) {
   const gc = document.createElement('canvas');
   gc.width = gc.height = 512;
   const gx = gc.getContext('2d');
-  gx.fillStyle = '#5fa534'; gx.fillRect(0, 0, 512, 512);
+  gx.fillStyle = '#aacd4d'; gx.fillRect(0, 0, 512, 512);
   for (let i = 0; i < 900; i++) {
-    gx.fillStyle = `rgba(${rnd() < 0.5 ? '40,120,30' : '130,190,60'},${0.08 + rnd() * 0.14})`;
+    gx.fillStyle = `rgba(${rnd() < 0.5 ? '110,155,35' : '200,230,110'},${0.08 + rnd() * 0.14})`;
     const r = 6 + rnd() * 34;
     gx.beginPath(); gx.arc(rnd() * 512, rnd() * 512, r, 0, 7); gx.fill();
   }
   for (let i = 0; i < 5000; i++) {
-    gx.strokeStyle = `rgba(${rnd() < 0.5 ? '35,110,25' : '160,210,80'},.35)`;
+    gx.strokeStyle = `rgba(${rnd() < 0.5 ? '100,145,30' : '215,240,130'},.35)`;
     const px = rnd() * 512, py = rnd() * 512;
     gx.beginPath(); gx.moveTo(px, py); gx.lineTo(px + rnd() * 3 - 1.5, py - 3 - rnd() * 5); gx.stroke();
   }
@@ -239,7 +239,7 @@ function makeWorld(scene) {
   const hillGeo = new THREE.SphereGeometry(1, 24, 12);
   for (let i = 0; i < 14; i++) {
     const a = (i / 14) * Math.PI * 2 + rnd() * 0.3, d = 96 + rnd() * 26, r = 20 + rnd() * 16;
-    const h = new THREE.Mesh(hillGeo, mat(i % 2 ? 0x4c8a38 : 0x58a040, 1));
+    const h = new THREE.Mesh(hillGeo, mat(i % 2 ? 0x98bb3a : 0xaacd4d, 1));
     h.scale.set(r * 1.5, r * 0.34, r * 1.2);
     h.position.set(Math.sin(a) * d, -1, Math.cos(a) * d);
     world.add(h);
@@ -322,7 +322,7 @@ function makeWorld(scene) {
 
   // Grashalme und Wildblumen im Hintergrund
   const tuft = new THREE.ConeGeometry(0.09, 0.5, 4);
-  const tufts = new THREE.InstancedMesh(tuft, new THREE.MeshStandardMaterial({ color: 0x6cb83a, roughness: 1, flatShading: true }), 1400);
+  const tufts = new THREE.InstancedMesh(tuft, new THREE.MeshStandardMaterial({ color: 0x9cc43f, roughness: 1, flatShading: true }), 1400);
   for (let i = 0; i < 1400; i++) {
     const a = rnd() * 6.283, d = 6 + Math.sqrt(rnd()) * 50;
     m4.makeScale(1, 0.6 + rnd() * 1.2, 1); m4.setPosition(Math.sin(a) * d, 0.2, Math.cos(a) * d); tufts.setMatrixAt(i, m4);
@@ -356,7 +356,7 @@ function makeWorld(scene) {
   const target = new THREE.Object3D();
   target.position.set(0, 3, 0);
   scene.add(target); sunLight.target = target;
-  const fill = new THREE.HemisphereLight(0xbfe0ff, 0x6fae4a, 0.45);
+  const fill = new THREE.HemisphereLight(0xbfe0ff, 0xaacd4d, 0.45);
   scene.add(fill);
 
   return { sky, dome, lights };
