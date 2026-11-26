@@ -76,16 +76,25 @@ function build() {
     return g;
   };
 
-  // 0 Sockel (Verwaltung)
+  // 0 Fundament mit Kellerfenstern (Schadenbeurteilung)
   {
-    const g = addLayer('sockel', 0, [0, 0, 0], 0.1, [0, 0.3, 0]);
+    const g = addLayer('keller', 0, [0, 0, 0], 0.05, [0, 0.55, 0]);
+    const beton = new THREE.MeshPhysicalMaterial({ color: 0x7d8286, roughness: 0.75, metalness: 0.02 });
+    g.add(mesh(bevBox(11.6, 1.1, 8.6, 0.05), beton, 0, 0.55, 0));
+    const dunkel = new THREE.MeshStandardMaterial({ color: 0x23282b, roughness: 0.4 });
+    [-3.6, 0, 3.6].forEach((x) => g.add(mesh(new THREE.BoxGeometry(1.5, 0.5, 0.06), dunkel, x, 0.62, 4.31)));
+  }
+
+  // 1 Sockel (Verwaltung)
+  {
+    const g = addLayer('sockel', 1.1, [0, 2.9, 0], 0.1, [0, 0.3, 0]);
     g.add(mesh(bevBox(11.2, 0.6, 8.2, 0.05), M.plinth, 0, 0.3, 0));
     g.add(mesh(bevBox(2.6, 0.22, 1.3, 0.04), M.plinth, 0, 0.11, 4.7));
   }
 
   // 1 Erdgeschoss (Vermietung)
   {
-    const g = addLayer('eg', 0.6, [0, 2.0, 0], 0.35, [0, 1.5, 0]);
+    const g = addLayer('eg', 1.7, [0, 5.4, 0], 0.35, [0, 1.5, 0]);
     const win = [{ x: -3, y: 0.25, w: 1.8, h: 1.5 }, { x: 3, y: 0.25, w: 1.8, h: 1.5 }];
     g.add(mesh(panel(10, 3, 0.3, [{ x: 0, y: -0.35, w: 1.3, h: 2.3 }, ...win]), M.wall, 0, 1.5, 3.5));
     g.add(mesh(panel(10, 3, 0.3, win), M.wall, 0, 1.5, -3.5));
@@ -101,7 +110,7 @@ function build() {
 
   // 2 Obergeschoss (Verkauf und Kauf)
   {
-    const g = addLayer('og', 3.6, [0, 4.2, 0], 0.6, [0, 1.4, 0]);
+    const g = addLayer('og', 4.7, [0, 7.9, 0], 0.6, [0, 1.4, 0]);
     const win = [-3, 0, 3].map((x) => ({ x, y: 0.1, w: 1.5, h: 1.4 }));
     g.add(mesh(panel(10, 2.8, 0.3, win), M.wall, 0, 1.4, 3.5));
     g.add(mesh(panel(10, 2.8, 0.3, win), M.wall, 0, 1.4, -3.5));
@@ -122,7 +131,7 @@ function build() {
   // 3 Dach mit Giebel und Herz (Bewertung)
   let heart;
   {
-    const g = addLayer('dach', 6.4, [0, 7.0, 0], 1.0, [0, 1.6, 0]);
+    const g = addLayer('dach', 7.5, [0, 10.6, 0], 1.0, [0, 1.6, 0]);
     const a = Math.atan2(3.3, 5.6);
     const len = Math.hypot(5.6, 3.3);
     [-1, 1].forEach((s) => {
@@ -208,42 +217,13 @@ function makeWorld(scene) {
   const world = new THREE.Group();
   scene.add(world);
 
-  // Wiese mit Farbflecken
-  const gc = document.createElement('canvas');
-  gc.width = gc.height = 512;
-  const gx = gc.getContext('2d');
-  gx.fillStyle = '#aacd4d'; gx.fillRect(0, 0, 512, 512);
-  for (let i = 0; i < 900; i++) {
-    gx.fillStyle = `rgba(${rnd() < 0.5 ? '110,155,35' : '200,230,110'},${0.08 + rnd() * 0.14})`;
-    const r = 6 + rnd() * 34;
-    gx.beginPath(); gx.arc(rnd() * 512, rnd() * 512, r, 0, 7); gx.fill();
-  }
-  for (let i = 0; i < 5000; i++) {
-    gx.strokeStyle = `rgba(${rnd() < 0.5 ? '100,145,30' : '215,240,130'},.35)`;
-    const px = rnd() * 512, py = rnd() * 512;
-    gx.beginPath(); gx.moveTo(px, py); gx.lineTo(px + rnd() * 3 - 1.5, py - 3 - rnd() * 5); gx.stroke();
-  }
-  const gtex = new THREE.CanvasTexture(gc);
-  gtex.wrapS = gtex.wrapT = THREE.RepeatWrapping;
-  gtex.repeat.set(26, 26);
-  gtex.colorSpace = THREE.SRGBColorSpace;
-  gtex.anisotropy = 4;
-  const meadow = new THREE.Mesh(new THREE.CircleGeometry(190, 64), new THREE.MeshStandardMaterial({ map: gtex, roughness: 1, metalness: 0, envMapIntensity: 0.55 }));
+  // Wiese: eine einzige Fläche in CMB-Grün
+  const meadow = new THREE.Mesh(new THREE.CircleGeometry(190, 64), new THREE.MeshBasicMaterial({ color: 0xaacd4d }));
   meadow.rotation.x = -Math.PI / 2;
   meadow.position.y = -0.02;
   world.add(meadow);
 
   const mat = (color, rough = 0.9) => new THREE.MeshStandardMaterial({ color, roughness: rough, metalness: 0, flatShading: true, envMapIntensity: 0.6 });
-
-  // Hügel am Horizont
-  const hillGeo = new THREE.SphereGeometry(1, 24, 12);
-  for (let i = 0; i < 14; i++) {
-    const a = (i / 14) * Math.PI * 2 + rnd() * 0.3, d = 96 + rnd() * 26, r = 20 + rnd() * 16;
-    const h = new THREE.Mesh(hillGeo, mat(i % 2 ? 0x98bb3a : 0xaacd4d, 1));
-    h.scale.set(r * 1.5, r * 0.34, r * 1.2);
-    h.position.set(Math.sin(a) * d, -1, Math.cos(a) * d);
-    world.add(h);
-  }
 
   // Bäume weit hinten und an den Seiten (blockieren nie die Sicht aufs Haus)
   const trunk = new THREE.CylinderGeometry(0.28, 0.4, 3, 8);
@@ -277,32 +257,7 @@ function makeWorld(scene) {
     const m = new THREE.Mesh(bush, crownM[i % 3]); m.scale.set(r, r * 0.8, r); m.position.set(x, r * 0.55, z); world.add(m);
   });
 
-  // Blumenbeete vor dem Haus
-  const bedM = mat(0x5a3b25, 1);
-  [-1, 1].forEach((s) => {
-    const bed = new THREE.Mesh(new THREE.BoxGeometry(4.6, 0.3, 1.5), bedM);
-    bed.position.set(s * 4.1, 0.13, 6.2); world.add(bed);
-  });
-  const petals = [0xff5a5f, 0xffc933, 0xff8fb8, 0xffffff, 0xb36bff];
-  const flower = new THREE.IcosahedronGeometry(0.17, 0);
-  const fl = new THREE.InstancedMesh(flower, new THREE.MeshStandardMaterial({ roughness: 0.7, flatShading: true }), 360);
-  const m4 = new THREE.Matrix4(), col = new THREE.Color();
-  for (let i = 0; i < 360; i++) {
-    let x, z;
-    if (i < 130) { x = (i % 2 ? 1 : -1) * (4.1 + (rnd() - 0.5) * 4.2); z = 6.2 + (rnd() - 0.5) * 1.2; }
-    else { const a = rnd() * 6.283, d = 10 + rnd() * 30; x = Math.sin(a) * d; z = Math.cos(a) * d; if (Math.abs(x) < 9 && Math.abs(z) < 7) { x += 14; } }
-    m4.makeScale(1, 1, 1); m4.setPosition(x, i < 130 ? 0.42 : 0.12, z);
-    fl.setMatrixAt(i, m4); fl.setColorAt(i, col.set(petals[(rnd() * 5) | 0]));
-  }
-  world.add(fl);
-
-  // Gartenweg zur Haustür (Trittplatten)
-  const stone = mat(0xd9d3c7, 0.8);
-  const slab = new THREE.CylinderGeometry(0.62, 0.66, 0.1, 10);
-  for (let i = 0; i < 9; i++) {
-    const m = new THREE.Mesh(slab, stone);
-    m.position.set(Math.sin(i * 0.7) * 0.45, 0.04, 6.2 + i * 1.5); m.scale.set(1, 1, 0.8); world.add(m);
-  }
+  const m4 = new THREE.Matrix4();
 
   // Weißer Gartenzaun (Latten instanziert), vorn mit Lücke für den Weg
   const pick = new THREE.BoxGeometry(0.18, 1.05, 0.06);
@@ -320,33 +275,12 @@ function makeWorld(scene) {
   post.forEach(([x, z, r], i) => { m4.makeRotationY(r); m4.setPosition(x, 0.52, z); fence.setMatrixAt(i, m4); });
   world.add(fence);
 
-  // Grashalme und Wildblumen im Hintergrund
-  const tuft = new THREE.ConeGeometry(0.09, 0.5, 4);
-  const tufts = new THREE.InstancedMesh(tuft, new THREE.MeshStandardMaterial({ color: 0x9cc43f, roughness: 1, flatShading: true }), 1400);
-  for (let i = 0; i < 1400; i++) {
-    const a = rnd() * 6.283, d = 6 + Math.sqrt(rnd()) * 50;
-    m4.makeScale(1, 0.6 + rnd() * 1.2, 1); m4.setPosition(Math.sin(a) * d, 0.2, Math.cos(a) * d); tufts.setMatrixAt(i, m4);
-  }
-  world.add(tufts);
-
   // Himmelskuppel, Sonne und Wolken: folgen der Kamera, drehen sich mit ihrem Blickwinkel
   const sky = new THREE.Group();
   scene.add(sky);
   const dome = new THREE.Mesh(new THREE.SphereGeometry(170, 32, 16), new THREE.MeshBasicMaterial({ map: skyTexture(SKY_STOPS), side: THREE.BackSide, fog: false, depthWrite: false }));
   dome.renderOrder = -10;
   scene.add(dome);
-  const sunDir = new THREE.Vector3(-0.3, 0.15, -0.95).normalize();
-  const sun = new THREE.Mesh(new THREE.SphereGeometry(5, 24, 12), new THREE.MeshBasicMaterial({ color: new THREE.Color(0xfff2c2).multiplyScalar(5), fog: false }));
-  sun.position.copy(sunDir).multiplyScalar(150);
-  sky.add(sun);
-  const glow = new THREE.Sprite(new THREE.SpriteMaterial({ map: softDot('rgba(255,244,200,.95)', 'rgba(255,230,150,.35)'), blending: THREE.AdditiveBlending, depthWrite: false, fog: false, transparent: true }));
-  glow.scale.setScalar(78); glow.position.copy(sun.position); sky.add(glow);
-  const cloudMap = softDot('rgba(255,255,255,.95)', 'rgba(255,255,255,.55)');
-  [[-0.9, 0.34, -0.5, 46, 15], [-0.15, 0.3, -1, 58, 17], [0.6, 0.38, -0.8, 50, 14], [0.95, 0.27, -0.2, 44, 12], [-0.62, 0.22, -0.9, 34, 10], [0.2, 0.46, -0.9, 38, 11]].forEach(([x, y, z, w, h]) => {
-    const c = new THREE.Sprite(new THREE.SpriteMaterial({ map: cloudMap, transparent: true, opacity: 0.9, depthWrite: false, fog: false }));
-    c.position.set(x, y, z).normalize().multiplyScalar(140); c.scale.set(w, h, 1); sky.add(c);
-  });
-
   // Sonnenlicht, kommt immer von schräg vorn links oben (relativ zur Kamera)
   const lights = new THREE.Group();
   scene.add(lights);
@@ -410,7 +344,7 @@ function start() {
 
   // Herzlicht
   const heartLight = new THREE.PointLight(0x7ad21e, 2.5, 10, 2);
-  heartLight.position.set(0, 7.65, 5.2);
+  heartLight.position.set(0, 8.75, 5.2);
   scene.add(heartLight);
 
   // Postprocessing
@@ -436,11 +370,11 @@ function start() {
 
   /* ---------- Kamera-Cues, an Abschnitte gebunden ---------- */
   const CUES = [
-    { id: 'beat-hero', frame: 15.5, az: 26, el: -1, t: [0, 5.6, 0], off: 0.2, e: 0, ts: 1 },
-    { id: 'beat-close', frame: 3.8, az: 6, el: 5, t: [0, 7.7, 3.5], off: 0.3, e: 0, ts: 0.22 },
-    { id: 'beat-apart', frame: 26, az: -22, el: 7, t: [0, 8.6, 0], off: 0.1, e: 1, ts: 1 },
-    { id: 'beat-around', frame: 26, az: 150, el: 12, t: [0, 8.6, 0], off: 0.1, e: 1, ts: 1 },
-    { id: 'beat-outro', frame: 16.5, az: 330, el: 0, t: [0, 5.4, 0], off: -0.2, e: 0, ts: 1 },
+    { id: 'beat-hero', frame: 16.5, az: 26, el: -1, t: [0, 6.2, 0], off: 0.2, e: 0, ts: 1 },
+    { id: 'beat-close', frame: 3.8, az: 6, el: 5, t: [0, 8.8, 3.5], off: 0.3, e: 0, ts: 0.22 },
+    { id: 'beat-apart', frame: 37, az: -22, el: 7, t: [0, 12.0, 0], off: 0.1, e: 1, ts: 1 },
+    { id: 'beat-around', frame: 37, az: 150, el: 12, t: [0, 12.0, 0], off: 0.1, e: 1, ts: 1 },
+    { id: 'beat-outro', frame: 17.5, az: 330, el: 0, t: [0, 6.0, 0], off: -0.2, e: 0, ts: 1 },
   ];
   const KEYS = ['frame', 'az', 'el', 'off', 'e', 'ts', 'tx', 'ty', 'tz'];
   CUES.forEach((c) => { [c.tx, c.ty, c.tz] = c.t; });
@@ -545,7 +479,7 @@ function start() {
     heart.material.emissiveIntensity = 0.7 + 0.9 * s;
     heart.scale.setScalar(1 + 0.07 * s);
     heartLight.intensity = 2.5 + 6 * s;
-    heartLight.position.set(0, layers[3].group.position.y + heart.position.y, heart.position.z + 1.8);
+    heartLight.position.set(0, layers[4].group.position.y + heart.position.y, heart.position.z + 1.8);
 
     placeCamera(cur);
     world.sky.rotation.y = rad(cur.az); world.lights.rotation.y = rad(cur.az);
